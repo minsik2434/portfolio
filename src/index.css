@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "NotoSansKR-Light";
+  font-weight: normal;
+  src: url("./fonts/NotoSansKR-Light.ttf") format("truetype");
+}
