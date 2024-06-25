@@ -1,9 +1,11 @@
 import React from "react";
+import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
 function Header({ onWelcomeClick, onAboutClick, height }) {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const headerRef = useRef(null);
   const [color, setColor] = useState({
     textColor: "text-white",
     bgColor: "",
@@ -12,6 +14,7 @@ function Header({ onWelcomeClick, onAboutClick, height }) {
   const updateScroll = () => {
     setScrollPosition(window.scrollY || document.documentElement.scrollTop);
   };
+
   useEffect(() => {
     window.addEventListener("scroll", updateScroll);
     return () => {
@@ -20,7 +23,10 @@ function Header({ onWelcomeClick, onAboutClick, height }) {
   });
 
   useEffect(() => {
-    if (scrollPosition < 600) {
+    if (
+      scrollPosition <
+      height - headerRef.current.getBoundingClientRect().height
+    ) {
       setColor({
         textColor: "text-white",
         bgColor: "",
@@ -33,9 +39,10 @@ function Header({ onWelcomeClick, onAboutClick, height }) {
         shadow: "shadow",
       });
     }
-  }, [scrollPosition]);
+  }, [height, scrollPosition]);
   return (
     <div
+      ref={headerRef}
       className={`w-full flex justify-center ${color.bgColor} ${color.shadow} top-0 fixed`}
     >
       <div className={`${color.textColor} w-[90%]`}>
