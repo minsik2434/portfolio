@@ -2,7 +2,8 @@ import React from "react";
 import hwaseong from "../assets/Hwaseong.jpg";
 import profile from "../assets/profile.jpg";
 import useTypingAnnimation from "../hooks/useTypingAnnimation";
-function Welcome() {
+import { forwardRef } from "react";
+const Welcome = forwardRef((props, ref) => {
   const { animeFinishFlag: firstFlag, TypingTextDiv: Greet } =
     useTypingAnnimation("안녕하세요", 200);
   const { TypingTextDiv: Introduce } = useTypingAnnimation(
@@ -13,6 +14,7 @@ function Welcome() {
 
   return (
     <div
+      ref={ref}
       className="h-[100vh] bg-blend-darken bg-black bg-opacity-70"
       style={{
         backgroundImage: `url(${hwaseong})`,
@@ -30,6 +32,6 @@ function Welcome() {
       </div>
     </div>
   );
-}
-
+});
+Welcome.displayName = "Welcome";
 export default Welcome;

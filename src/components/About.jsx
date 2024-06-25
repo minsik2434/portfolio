@@ -6,13 +6,14 @@ import name from "../assets/name.png";
 import birth from "../assets/birth.png";
 import grade from "../assets/grade.png";
 import github from "../assets/github.png";
-function About() {
+import { forwardRef } from "react";
+const About = forwardRef((props, ref) => {
   const githubLink = () => {
     window.location.href = "https://github.com/minsik2434"; // 이동하고자 하는 URL로 변경
   };
 
   return (
-    <div className="pt-[80px] px-[50px]">
+    <div className="pt-[80px] px-[50px]" ref={ref}>
       <h2 className="pl-[30px] text-[40px] border-t-[2px] border-black pt-[10px] text-center font-bold">
         About
       </h2>
@@ -69,6 +70,6 @@ function About() {
       </div>
     </div>
   );
-}
-
+});
+About.displayName = "Welcome";
 export default About;

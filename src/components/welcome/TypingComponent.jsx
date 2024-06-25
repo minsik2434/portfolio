@@ -32,7 +32,6 @@ const TypingComponent = ({
 
     if (textIndex.current >= text.length) {
       setAnimeFinished();
-      console.log("finish!");
       return;
     }
     requestAnimationFrame(animationCallback);
