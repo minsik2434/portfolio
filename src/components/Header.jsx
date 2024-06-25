@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-function Header({ onWelcomeClick, onAboutClick, height }) {
+function Header({ onWelcomeClick, onAboutClick, onSkillsClick, height }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const headerRef = useRef(null);
   const [color, setColor] = useState({
@@ -52,7 +52,7 @@ function Header({ onWelcomeClick, onAboutClick, height }) {
           </div>
           <div className="flex gap-[30px] text-[18px] font-semibold">
             <button onClick={onAboutClick}>About</button>
-            <button>Skills</button>
+            <button onClick={onSkillsClick}>Skills</button>
             <button>Project</button>
             <button>Contact</button>
           </div>

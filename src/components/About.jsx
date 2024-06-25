@@ -13,12 +13,12 @@ const About = forwardRef((props, ref) => {
   };
 
   return (
-    <div className="pt-[80px] px-[50px]" ref={ref}>
+    <div className="py-[80px] px-[50px]" ref={ref}>
       <h2 className="pl-[30px] text-[40px] border-t-[2px] border-black pt-[10px] text-center font-bold">
         About
       </h2>
       <div className="flex">
-        <div className="flex flex-col w-[40%] items-center bg-[#89b2e9] py-[40px] rounded-tl-[10px] rounded-bl-[10px] rounded-br-[70px]">
+        <div className="flex flex-col w-[40%] items-center bg-[#89b2e9] py-[40px] rounded-tl-[10px] rounded-bl-[10px] rounded-br-[70px] shadow-xl">
           <img src={my} className="w-[50%] rounded-full"></img>
           <div className="grid grid-cols-[10%_60%] gap-x-[50px] gap-y-[20px] justify-center px-[10px] w-[80%] mt-[20px] text-[20px] font-semibold">
             <img src={name} className="w-[35px]" /> <span>최민식</span>
@@ -71,5 +71,5 @@ const About = forwardRef((props, ref) => {
     </div>
   );
 });
-About.displayName = "Welcome";
+About.displayName = "About";
 export default About;

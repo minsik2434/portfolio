@@ -3,8 +3,6 @@ import hwaseong from "../assets/Hwaseong.jpg";
 import profile from "../assets/profile.jpg";
 import useTypingAnnimation from "../hooks/useTypingAnnimation";
 import { forwardRef } from "react";
-import { useEffect } from "react";
-import { useState } from "react";
 const Welcome = forwardRef((props, ref) => {
   const { animeFinishFlag: firstFlag, TypingTextDiv: Greet } =
     useTypingAnnimation("안녕하세요", 200);

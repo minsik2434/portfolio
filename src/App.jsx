@@ -11,9 +11,9 @@ import { useLayoutEffect } from "react";
 function App() {
   const welcomeRef = useRef(null);
   const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
   const [changeHeader, setChangeHeader] = useState(0);
   const onWelcomeClick = () => {
-    console.log(welcomeRef);
     welcomeRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -21,23 +21,26 @@ function App() {
     aboutRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const onSkillsClick = () => {
+    skillsRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   useLayoutEffect(() => {
     setChangeHeader(welcomeRef.current.getBoundingClientRect().height);
   }, []);
 
-  console.log(changeHeader);
   return (
     <div>
       <header className="flex justify-center">
         <Header
           onWelcomeClick={onWelcomeClick}
           onAboutClick={onAboutClick}
+          onSkillsClick={onSkillsClick}
           height={changeHeader}
         />
       </header>
       <Welcome ref={welcomeRef} />
       <About ref={aboutRef} />
-      <Skills />
+      <Skills ref={skillsRef} />
     </div>
   );
 }
