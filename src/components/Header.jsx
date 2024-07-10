@@ -3,7 +3,13 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-function Header({ onWelcomeClick, onAboutClick, onSkillsClick, height }) {
+function Header({
+  onWelcomeClick,
+  onAboutClick,
+  onSkillsClick,
+  onProjectsClick,
+  height,
+}) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const headerRef = useRef(null);
   const [color, setColor] = useState({
@@ -36,14 +42,14 @@ function Header({ onWelcomeClick, onAboutClick, onSkillsClick, height }) {
       setColor({
         textColor: "text-black",
         bgColor: "bg-white",
-        shadow: "shadow",
+        shadow: "shadow shadow-neutral-400",
       });
     }
   }, [height, scrollPosition]);
   return (
     <div
       ref={headerRef}
-      className={`w-full flex justify-center ${color.bgColor} ${color.shadow} top-0 fixed`}
+      className={`w-full flex justify-center ${color.bgColor} ${color.shadow} top-0 fixed z-10`}
     >
       <div className={`${color.textColor} w-[90%]`}>
         <div className="flex justify-between py-[20px]">
@@ -51,10 +57,16 @@ function Header({ onWelcomeClick, onAboutClick, onSkillsClick, height }) {
             <button onClick={onWelcomeClick}>Minsik&#39;s Portfolio</button>
           </div>
           <div className="flex gap-[30px] text-[18px] font-semibold">
-            <button onClick={onAboutClick}>About</button>
-            <button onClick={onSkillsClick}>Skills</button>
-            <button>Project</button>
-            <button>Contact</button>
+            <button className="hover:text-[#adb5bd]" onClick={onAboutClick}>
+              About
+            </button>
+            <button className="hover:text-[#adb5bd]" onClick={onSkillsClick}>
+              Skills
+            </button>
+            <button className="hover:text-[#adb5bd]" onClick={onProjectsClick}>
+              Project
+            </button>
+            <button className="hover:text-[#adb5bd]">Contact</button>
           </div>
         </div>
       </div>

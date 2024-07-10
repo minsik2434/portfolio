@@ -5,7 +5,7 @@ import email from "../assets/email.png";
 import name from "../assets/name.png";
 import birth from "../assets/birth.png";
 import grade from "../assets/grade.png";
-import github from "../assets/github.png";
+import github from "../assets/skills/github.png";
 import { forwardRef } from "react";
 const About = forwardRef((props, ref) => {
   const githubLink = () => {
@@ -13,7 +13,7 @@ const About = forwardRef((props, ref) => {
   };
 
   return (
-    <div className="py-[80px] px-[50px]" ref={ref}>
+    <div className="py-[78px] px-[50px]" ref={ref}>
       <h2 className="pl-[30px] text-[40px] border-t-[2px] border-black pt-[10px] text-center font-bold">
         About
       </h2>

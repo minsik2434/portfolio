@@ -1,27 +1,27 @@
 import React from "react";
 import { forwardRef } from "react";
 import Icon from "./skills/Icon";
-import Java from "../assets/java.png";
-import Spring from "../assets/spring.png";
-import SpringBoot from "../assets/springboot.png";
-import SpringDataJpa from "../assets/springdatajpa.png";
-import Jpa from "../assets/jpa.png";
-import Querydsl from "../assets/querydsl.png";
-import MySql from "../assets/mysql.png";
-import Ec2 from "../assets/ec2.png";
-import S3 from "../assets/s3.png";
-import Html from "../assets/html.png";
-import Css from "../assets/css.png";
-import Tailwind from "../assets/tailwind.png";
-import react from "../assets/react.png";
-import thymeleaf from "../assets/thymeleaf.png";
-import SpringSecurity from "../assets/springsecurity.png";
-import Git from "../assets/git.png";
-import Github from "../assets/github.png";
+import Java from "../assets/skills/java.png";
+import Spring from "../assets/skills/spring.png";
+import SpringBoot from "../assets/skills/springboot.png";
+import SpringDataJpa from "../assets/skills/springdatajpa.png";
+import Jpa from "../assets/skills/jpa.png";
+import Querydsl from "../assets/skills/querydsl.png";
+import MySql from "../assets/skills/mysql.png";
+import Ec2 from "../assets/skills/ec2.png";
+import S3 from "../assets/skills/s3.png";
+import Html from "../assets/skills/html.png";
+import Css from "../assets/skills/css.png";
+import Tailwind from "../assets/skills/tailwind.png";
+import react from "../assets/skills/react.png";
+import thymeleaf from "../assets/skills/thymeleaf.png";
+import SpringSecurity from "../assets/skills/springsecurity.png";
+import Git from "../assets/skills/git.png";
+import Github from "../assets/skills/github.png";
 const Skills = forwardRef((props, ref) => {
   return (
     <div className="bg-[#f6f6fe]">
-      <div className="pt-[80px] px-[50px]" ref={ref}>
+      <div className="pt-[78px] px-[50px]" ref={ref}>
         <h2 className="pl-[30px] text-[40px] border-t-[2px] border-black pt-[10px] text-center font-bold">
           Skills
         </h2>
