@@ -6,23 +6,32 @@ import board from "../../assets/devmate/board.png";
 import board2 from "../../assets/devmate/board2.png";
 import boardDetail from "../../assets/devmate/boardDetail.png";
 import profile from "../../assets/devmate/profile.png";
-import ImgSwiper from "./ImgSwiper";
+import ImgSwiper from "../ImgSwiper";
 function DevMate() {
   const imageSrcs = [main, login, signup, board, board2, boardDetail, profile];
   return (
-    <div className="bg-white pt-[20px] rounded-3xl">
+    <div className="bg-white pt-[20px] rounded-3xl border border-gray-100">
       <h2 className="text-[30px] text-center font-semibold">DevMate</h2>
       <p className="text-center">개발자 커뮤니티 사이트</p>
       <div className="flex gap-[50px] px-[40px] py-[50px]">
-        <div className="w-[50%] h-full">
+        <div className="w-[50%] h-full image">
           <ImgSwiper imageSrcs={imageSrcs} />
         </div>
         <div className="flex flex-col w-[40%]">
           <h3 className="text-[20px] font-semibol py-[10px]">Description</h3>
           <p className="font-NotoSansKR_Light">
             개발자들이 자유롭게 의사소통하고 필요한 지식을 얻고 멘토찾기,
-            멘티모집, 스터디 참여등 커뮤니티 활동을 위한 사이트 입니다 접근성을
-            높이기 위해 반응형으로 제작해 모바일환경 UI 제공됩니다
+            멘티모집, 스터디 참여등 커뮤니티 활동을 위한 사이트 입니다 개발자를
+            위한 사이트이므로 게시글을 마크다운으로 작성할 수 있도록 하였고
+            접근성을 높이기 위해 반응형으로 제작해 모바일환경 UI 제공됩니다.{" "}
+            <br />
+            MySql을 이용해 데이터베이스를 구성하였고 API 백엔드 서버는 Amazon
+            EC2를 이용해 배포하였고, 웹 사이트 FrontEnd 서버는 Vercel을 이용해
+            배포하였습니다. <br />
+            백엔드 서버는 Spring 프레임워크를 이용해 구현하였으며 ORM은 JPA를
+            사용해 핵심 로직을 구현하였습니다 <br />
+            프론트엔드 서버는 리액트를 사용해 구현하였으며 Zustand를 사용해 전역
+            상태 관리를 통해 체계적으로 상태 관리 하였습니다
           </p>
           <div className="mt-[10px]">
             <h3 className="text-[20px]">주요기능</h3>
@@ -45,10 +54,7 @@ function DevMate() {
               <li>
                 <div className="flex">
                   <span className="text-nowrap">게시글 :</span>
-                  <span>
-                    등록, 수정, 삭제, 좋아요, 조회수, 댓글, 마크다운 형식으로
-                    게시글 작성 가능
-                  </span>
+                  <span>등록, 수정, 삭제, 좋아요, 조회수, 댓글</span>
                 </div>
               </li>
               <li>

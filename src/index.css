@@ -8,20 +8,20 @@
   src: url("./fonts/NotoSansKR-Light.ttf") format("truetype");
 }
 
-.swiper-button-next {
-  background: url(src/assets/btn.png) no-repeat;
+.image .swiper-button-next {
+  background: url(src/assets/imgbtn.png) no-repeat;
   background-size: 50% auto;
   background-position: center;
 }
 
-.swiper-button-prev {
-  background: url(src/assets/btn.png) no-repeat;
+.image .swiper-button-prev {
+  background: url(src/assets/imgbtn.png) no-repeat;
   background-size: 50% auto;
   background-position: center;
   transform: rotate(180deg);
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.image .swiper-button-next::after,
+.image .swiper-button-prev::after {
   display: none;
 }
