@@ -27,6 +27,32 @@ function CloneTving() {
       <div className="flex gap-[50px] px-[40px] py-[50px]">
         <div className="w-[50%] h-full image">
           <ImgSwiper imageSrcs={imageSrcs} />
+          <div className="flex flex-col gap-2">
+            <ul className="list-disc text-[18px] mt-[50px] flex flex-col gap-2 pl-5">
+              <li>
+                <div className="flex gap-[10px]">
+                  <span>인원</span>:<span>4</span>
+                </div>
+              </li>
+              <li>
+                <div className="flex gap-[10px]">
+                  <span>기간</span>:<sapn>2023.12 ~ 2024.04</sapn>
+                </div>
+              </li>
+            </ul>
+            <h2 className="text-[20px] mt-[10px]">역할 및 기여</h2>
+            <div className="flex gap-2">
+              <span className="text-nowrap">데이터베이스 설계</span> :
+              <span>데이터베이스 모델링, MySQL을 사용해 데이터베이스 구축</span>
+            </div>
+            <div className="flex gap-2">
+              <span className="text-nowrap">API 구현</span> :
+              <span>
+                프로필 CRUD 로직 구현, 콘텐츠 관련 로직 구현, 장르 조회 로직
+                구현, 쿼리 성능 최적화
+              </span>
+            </div>
+          </div>
         </div>
         <div className="flex flex-col w-[40%]">
           <h3 className="text-[20px] font-semibol py-[10px]">Description</h3>
@@ -119,7 +145,7 @@ function CloneTving() {
                   <span>프론드엔드 깃허브 : </span>
                   <a
                     className="underline text-blue-400"
-                    href="https://github.com/minsik2434/DevMateFE"
+                    href="https://github.com/hoyeonjigi/CloneTving"
                   >
                     https://github.com/hoyeonjigi/CloneTving
                   </a>
@@ -130,7 +156,7 @@ function CloneTving() {
                   <span className="text-nowrap">백엔드 깃허브 : </span>
                   <a
                     className="underline text-blue-400"
-                    href="https://github.com/minsik2434/DevMateBE"
+                    href="https://github.com/hoyeonjigi/CloneTving_BackEnd"
                   >
                     https://github.com/hoyeonjigi/CloneTving_BackEnd
                   </a>

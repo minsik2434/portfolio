@@ -12,7 +12,7 @@ import { useRef } from "react";
 const Projects = forwardRef((props, ref) => {
   const divRef = useRef(null);
   return (
-    <div className="bg-[#edf2fb] py-[79px]" ref={ref}>
+    <div className="bg-[#edf2fb] py-[79px] px-[50px]" ref={ref}>
       <h2 className="pl-[30px] text-[40px] border-t-[2px] border-black pt-[10px] text-center font-bold">
         Projects
       </h2>
@@ -23,7 +23,7 @@ const Projects = forwardRef((props, ref) => {
           slidesPerView={1}
           navigation={true}
           pagination={{ clickable: true }}
-          className=" bg-white rounded-xl mt-[40px]"
+          className=" bg-white rounded-3xl mt-[40px] shadow-xl"
           centeredSlides={true}
         >
           <SwiperSlide className="h-full">

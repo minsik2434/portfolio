@@ -16,6 +16,50 @@ function DevMate() {
       <div className="flex gap-[50px] px-[40px] py-[50px]">
         <div className="w-[50%] image">
           <ImgSwiper imageSrcs={imageSrcs} />
+          <ul className="list-disc text-[18px] mt-[50px] flex flex-col gap-2 pl-5">
+            <li>
+              <div className="flex gap-[10px]">
+                <span>인원</span>:<span>2</span>
+              </div>
+            </li>
+            <li>
+              <div className="flex gap-[10px]">
+                <span>기간</span>:<sapn>2024.05 ~ 2024.06</sapn>
+              </div>
+            </li>
+          </ul>
+          <h2 className="text-[20px] mt-[10px]">역할 및 기여</h2>
+          <div className="flex flex-col gap-1">
+            <div className="flex gap-2">
+              <span className="text-nowrap">기획</span> :
+              <span>
+                프로젝트 목적과 개요, 기대효과, 대상 사용자, SWOT 분석, 요구사항
+                분석 등 전반적인 프로젝트를 기획
+              </span>
+            </div>
+            <div className="flex gap-2">
+              <span className="text-nowrap">UX/UI 설계</span> :
+              <span>
+                스케치로 와이어프레임 설계, 와이어 프레임을 기반으로 figma를
+                사용해 프로토타입 설계
+              </span>
+            </div>
+            <div className="flex gap-2">
+              <span className="text-nowrap">리액트 컴포넌트 구현</span> :
+              <span>
+                리액트를 사용해 페이지 마크업과 컴포넌트 구현 및 상태관리,
+                Axios를 사용해 API 통신
+              </span>
+            </div>
+            <div className="flex gap-2">
+              <span className="text-nowrap">데이터베이스 설계</span> :
+              <span>데이터베이스 모델링, MySQL을 사용해 데이터베이스 구축</span>
+            </div>
+            <div className="flex gap-2">
+              <span className="text-nowrap">백엔드 서버 구축</span> :
+              <span>API 설계, API 서버 구축, 백엔드 서버 핵심 로직 구현</span>
+            </div>
+          </div>
         </div>
         <div className="flex flex-col w-[40%]">
           <h3 className="text-[20px] font-semibol py-[10px]">Description</h3>
@@ -23,7 +67,7 @@ function DevMate() {
             개발자들이 자유롭게 의사소통하고 필요한 지식을 얻고 멘토찾기,
             멘티모집, 스터디 참여등 커뮤니티 활동을 위한 사이트 입니다 개발자를
             위한 사이트이므로 게시글을 마크다운으로 작성할 수 있도록 하였고
-            접근성을 높이기 위해 반응형으로 제작해 모바일환경 UI 제공됩니다.{" "}
+            접근성을 높이기 위해 반응형으로 제작해 모바일환경 UI 제공됩니다.
             <br />
             MySql을 이용해 데이터베이스를 구성하였고 API 백엔드 서버는 Amazon
             EC2를 이용해 배포하였고, 웹 사이트 FrontEnd 서버는 Vercel을 이용해
