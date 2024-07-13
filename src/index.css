@@ -25,3 +25,10 @@
 .image .swiper-button-prev::after {
   display: none;
 }
+
+.swiper-pagination-bullet {
+  background-color: rgb(153, 255, 0);
+}
+.swiper-pagination-bullet-active {
+  background-color: rgb(153, 255, 0);
+}

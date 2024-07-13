@@ -21,7 +21,7 @@ function CloneTving() {
     search,
   ];
   return (
-    <div className="bg-white pt-[20px] rounded-3xl border border-gray-100 h-[80%]">
+    <div className="pt-[20px] px-[30px]">
       <h2 className="text-[30px] text-center font-semibold">Clone-Tving</h2>
       <p className="text-center">OTT Tving 클론코딩 사이트</p>
       <div className="flex gap-[50px] px-[40px] py-[50px]">
@@ -127,7 +127,7 @@ function CloneTving() {
               </li>
               <li>
                 <div>
-                  <span>백엔드 깃허브 : </span>
+                  <span className="text-nowrap">백엔드 깃허브 : </span>
                   <a
                     className="underline text-blue-400"
                     href="https://github.com/minsik2434/DevMateBE"

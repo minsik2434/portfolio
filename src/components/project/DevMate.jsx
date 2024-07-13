@@ -10,11 +10,11 @@ import ImgSwiper from "../ImgSwiper";
 function DevMate() {
   const imageSrcs = [main, login, signup, board, board2, boardDetail, profile];
   return (
-    <div className="bg-white pt-[20px] rounded-3xl border border-gray-100">
+    <div className="pt-[20px] px-[30px]">
       <h2 className="text-[30px] text-center font-semibold">DevMate</h2>
       <p className="text-center">개발자 커뮤니티 사이트</p>
       <div className="flex gap-[50px] px-[40px] py-[50px]">
-        <div className="w-[50%] h-full image">
+        <div className="w-[50%] image">
           <ImgSwiper imageSrcs={imageSrcs} />
         </div>
         <div className="flex flex-col w-[40%]">
