@@ -29,7 +29,7 @@ function ImgSwiper({ imageSrcs }) {
       {imageSrcs.map((src, index) => {
         return (
           <SwiperSlide key={index}>
-            <img className="w-full h-full" src={src} />
+            <img className="w-full" src={src} />
           </SwiperSlide>
         );
       })}
