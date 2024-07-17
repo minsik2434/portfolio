@@ -7,12 +7,14 @@ import Welcome from "./components/Welcome";
 import { useState } from "react";
 import { useLayoutEffect } from "react";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
   const welcomeRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const projectRef = useRef(null);
+  const contactRef = useRef(null);
   const [changeHeader, setChangeHeader] = useState(0);
   const onWelcomeClick = () => {
     welcomeRef.current.scrollIntoView({ behavior: "smooth" });
@@ -29,6 +31,10 @@ function App() {
   const onProjectsClick = () => {
     projectRef.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  const onContactClick = () => {
+    contactRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   useLayoutEffect(() => {
     setChangeHeader(welcomeRef.current.getBoundingClientRect().height);
   }, []);
@@ -41,6 +47,7 @@ function App() {
           onAboutClick={onAboutClick}
           onSkillsClick={onSkillsClick}
           onProjectsClick={onProjectsClick}
+          onContactClick={onContactClick}
           height={changeHeader}
         />
       </header>
@@ -48,6 +55,7 @@ function App() {
       <About ref={aboutRef} />
       <Skills ref={skillsRef} />
       <Projects ref={projectRef} />
+      <Contact ref={contactRef} />
     </div>
   );
 }
