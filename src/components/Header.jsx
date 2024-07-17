@@ -8,6 +8,7 @@ function Header({
   onAboutClick,
   onSkillsClick,
   onProjectsClick,
+  onContactClick,
   height,
 }) {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -66,7 +67,9 @@ function Header({
             <button className="hover:text-[#adb5bd]" onClick={onProjectsClick}>
               Project
             </button>
-            <button className="hover:text-[#adb5bd]">Contact</button>
+            <button className="hover:text-[#adb5bd]" onClick={onContactClick}>
+              Contact
+            </button>
           </div>
         </div>
       </div>

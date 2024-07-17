@@ -48,9 +48,9 @@ const Contact = forwardRef((props, ref) => {
       );
   };
   return (
-    <div className="h-[100vh]">
+    <div className="h-[100vh]" ref={ref}>
       <ToastContainer position="top-center" />
-      <div className="pt-[78px] pb-[50px] px-[50px] h-full" ref={ref}>
+      <div className="pt-[78px] pb-[50px] px-[50px] h-full">
         <h2 className="pl-[30px] text-[40px] border-t-[2px] border-black pt-[10px] text-center font-bold">
           Contact
         </h2>
