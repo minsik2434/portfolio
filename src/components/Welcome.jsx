@@ -23,8 +23,8 @@ const Welcome = forwardRef((props, ref) => {
         backgroundPosition: "center",
       }}
     >
-      <div className="flex flex-col items-center pt-[100px]">
-        <img src={profile} className="w-[350px] rounded-full"></img>
+      <div className="flex flex-col items-center pt-[8rem]">
+        <img src={profile} className="w-[20rem] rounded-full" />
         <div className="flex flex-col items-center mt-[80px]">
           <Greet />
           <Introduce />

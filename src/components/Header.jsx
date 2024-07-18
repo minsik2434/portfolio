@@ -66,8 +66,8 @@ function Header({
         <div
           className={`${color.textColor} w-[90%] tablet:text-black mobile:text-black`}
         >
-          <div className="flex justify-between py-[20px]">
-            <div className="text-[25px] font-bold">
+          <div className="flex justify-between py-[18px]">
+            <div className="text-[1.5rem] font-bold">
               <button onClick={onWelcomeClick}>Minsik&#39;s Portfolio</button>
             </div>
             <div className="flex gap-[30px] text-[18px] font-semibold mobile:hidden tablet:hidden">
@@ -89,7 +89,7 @@ function Header({
             </div>
             <div className="hidden mobile:block tablet:block">
               <button type="button" onClick={onHbtnClick}>
-                <img src={Hbtn_b} className="w-10" />
+                <img src={Hbtn_b} className="w-8" />
               </button>
             </div>
           </div>

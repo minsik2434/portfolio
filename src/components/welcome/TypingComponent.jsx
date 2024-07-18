@@ -49,7 +49,7 @@ const TypingComponent = ({
       cancelAnimationFrame(animeId);
     };
   }, [flag]);
-  return <p className="text-white text-[30px]">{typingText}</p>;
+  return <p className="text-white text-[1.5rem]">{typingText}</p>;
 };
 
 export default TypingComponent;
