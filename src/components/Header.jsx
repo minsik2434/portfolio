@@ -2,7 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import Hbtn_b from "../assets/h_btn_b.png";
+import Hbtn_b from "../assets/h_btn.png";
 function Header({
   onWelcomeClick,
   onAboutClick,

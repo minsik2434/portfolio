@@ -226,7 +226,7 @@ function EatWell() {
                 </div>
               </li>
               <li>
-                <div className="flex  text-nowrap">
+                <div className="flex text-nowrap">
                   <span>깃허브 : </span>
                   <a
                     className="underline text-blue-400 mobile:hidden"
