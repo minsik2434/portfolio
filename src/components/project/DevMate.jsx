@@ -13,12 +13,17 @@ function DevMate() {
     <div className="pt-[20px] px-[30px]">
       <h2 className="text-[30px] text-center font-semibold">DevMate</h2>
       <p className="text-center">개발자 커뮤니티 사이트</p>
-      <div className="flex gap-[50px] px-[40px] py-[50px]">
-        <div className="w-[50%] image">
-          <ImgSwiper imageSrcs={imageSrcs} />
-          <ul className="list-disc text-[18px] mt-[50px] flex flex-col gap-2 pl-5">
+      <div className="desktop:hidden w-[100%] image">
+        <ImgSwiper imageSrcs={imageSrcs} />
+      </div>
+      <div className="flex gap-[50px] tablet:flex-col-reverse mobile:flex-col-reverse tablet:gap-[20px] mobile:gap-[10px] px-[40px] tablet:px-5 tablet:py-[20px] mobile:px-0 py-[50px]">
+        <div className="w-[50%] image tablet:w-full mobile:w-full">
+          <div className="mobile:hidden tablet:hidden">
+            <ImgSwiper imageSrcs={imageSrcs} />
+          </div>
+          <ul className="list-disc text-[18px] mobile:text-[14px] mt-[50px] tablet:mt-[10px] mobile:mt-[5px] mobile:text-nowrap flex flex-col gap-2 pl-5">
             <li>
-              <div className="flex gap-[10px]">
+              <div className="flex mobile: gap-[10px]">
                 <span>인원</span>:<span>2</span>
               </div>
             </li>
@@ -29,39 +34,47 @@ function DevMate() {
             </li>
           </ul>
           <h2 className="text-[20px] mt-[10px]">역할 및 기여</h2>
-          <div className="flex flex-col gap-1">
-            <div className="flex gap-2">
-              <span className="text-nowrap">기획</span> :
-              <span>
-                프로젝트 목적과 개요, 기대효과, 대상 사용자, SWOT 분석, 요구사항
-                분석 등 전반적인 프로젝트를 기획
-              </span>
-            </div>
-            <div className="flex gap-2">
-              <span className="text-nowrap">UX/UI 설계</span> :
-              <span>
-                스케치로 와이어프레임 설계, 와이어 프레임을 기반으로 figma를
-                사용해 프로토타입 설계
-              </span>
-            </div>
-            <div className="flex gap-2">
-              <span className="text-nowrap">리액트 컴포넌트 구현</span> :
-              <span>
-                리액트를 사용해 페이지 마크업과 컴포넌트 구현 및 상태관리,
-                Axios를 사용해 API 통신
-              </span>
-            </div>
-            <div className="flex gap-2">
-              <span className="text-nowrap">데이터베이스 설계</span> :
-              <span>데이터베이스 모델링, MySQL을 사용해 데이터베이스 구축</span>
-            </div>
-            <div className="flex gap-2">
-              <span className="text-nowrap">백엔드 서버 구축</span> :
-              <span>API 설계, API 서버 구축, 백엔드 서버 핵심 로직 구현</span>
+          <div>
+            <div className="flex flex-col gap-1">
+              <div className="flex mobile:block gap-2">
+                <span className="text-nowrap font-bold">기획</span> :
+                <span>
+                  프로젝트 목적과 개요, 기대효과, 대상 사용자, SWOT 분석,
+                  요구사항 분석 등 전반적인 프로젝트를 기획
+                </span>
+              </div>
+              <div className="flex mobile:block gap-2">
+                <span className="text-nowrap font-bold">UX/UI 설계</span> :
+                <span>
+                  스케치로 와이어프레임 설계, 와이어 프레임을 기반으로 figma를
+                  사용해 프로토타입 설계
+                </span>
+              </div>
+              <div className="flex mobile:block gap-2">
+                <span className="text-nowrap font-bold">
+                  리액트 컴포넌트 구현
+                </span>{" "}
+                :
+                <span>
+                  리액트를 사용해 페이지 마크업과 컴포넌트 구현 및 상태관리,
+                  Axios를 사용해 API 통신
+                </span>
+              </div>
+              <div className="flex mobile:block gap-2">
+                <span className="text-nowrap font-bold">데이터베이스 설계</span>
+                :
+                <span>
+                  데이터베이스 모델링, MySQL을 사용해 데이터베이스 구축
+                </span>
+              </div>
+              <div className="flex mobile:block gap-2">
+                <span className="text-nowrap font-bold">백엔드 서버 구축</span>:
+                <span>API 설계, API 서버 구축, 백엔드 서버 핵심 로직 구현</span>
+              </div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-[40%]">
+        <div className="flex flex-col w-[40%] tablet:w-full mobile:w-full">
           <h3 className="text-[20px] font-semibol py-[10px]">Description</h3>
           <p className="font-NotoSansKR_Light">
             개발자들이 자유롭게 의사소통하고 필요한 지식을 얻고 멘토찾기,
@@ -79,32 +92,38 @@ function DevMate() {
           </p>
           <div className="mt-[10px]">
             <h3 className="text-[20px]">주요기능</h3>
-            <ul className="font-NotoSansKR_Light list-disc ml-5">
+            <ul className="list-disc ml-5">
               <li>
-                <div className="flex">
-                  <span className="text-nowrap">회원 관리 :</span>
-                  <span>
+                <div className="flex mobile:block">
+                  <span className="text-nowrap font-bold">회원 관리 :</span>
+                  <span className="font-NotoSansKR_Light">
                     로그인, 로그아웃, 회원 등록, 회원 정보 수정, 게시한글,
                     댓글단글, 좋아요한 글 조회
                   </span>
                 </div>
               </li>
               <li>
-                <div className="flex">
-                  <span className="text-nowrap">게시판 :</span>
-                  <span>정렬, 카테고리별 조회, 검색, 태그별 조회</span>
+                <div className="flex mobile:block">
+                  <span className="text-nowrap font-bold">게시판 :</span>
+                  <span className="font-NotoSansKR_Light">
+                    정렬, 카테고리별 조회, 검색, 태그별 조회
+                  </span>
                 </div>
               </li>
               <li>
-                <div className="flex">
-                  <span className="text-nowrap">게시글 :</span>
-                  <span>등록, 수정, 삭제, 좋아요, 조회수, 댓글</span>
+                <div className="flex mobile:block">
+                  <span className="text-nowrap font-bold">게시글 :</span>
+                  <span className="font-NotoSansKR_Light">
+                    등록, 수정, 삭제, 좋아요, 조회수, 댓글
+                  </span>
                 </div>
               </li>
               <li>
-                <div className="flex">
-                  <span className="text-nowrap">댓글 :</span>
-                  <span>등록, 수정, 삭제</span>
+                <div className="flex mobile:block">
+                  <span className="text-nowrap font-bold">댓글 :</span>
+                  <span className="font-NotoSansKR_Light">
+                    등록, 수정, 삭제
+                  </span>
                 </div>
               </li>
             </ul>
@@ -139,7 +158,6 @@ function DevMate() {
             <ul className="list-disc ml-5">
               <li>
                 <div>
-                  {" "}
                   <span>사이트 URL : </span>
                   <a
                     className="underline text-blue-400"

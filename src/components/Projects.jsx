@@ -13,11 +13,11 @@ import EatWell from "./project/EatWell";
 const Projects = forwardRef((props, ref) => {
   const divRef = useRef(null);
   return (
-    <div className="bg-[#edf2fb] py-[79px] px-[50px]" ref={ref}>
+    <div className="bg-[#edf2fb] py-[79px] px-[50px] mobile:px-5" ref={ref}>
       <h2 className="pl-[30px] text-[40px] border-t-[2px] border-black pt-[10px] text-center font-bold">
         Projects
       </h2>
-      <div className="w-[90%] m-auto">
+      <div className="w-[90%] mobile:w-full m-auto">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={10}

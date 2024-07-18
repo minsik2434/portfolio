@@ -21,7 +21,7 @@ import Github from "../assets/skills/github.png";
 const Skills = forwardRef((props, ref) => {
   return (
     <div className="bg-[#f6f6fe]">
-      <div className="pt-[78px] px-[50px]" ref={ref}>
+      <div className="pt-[78px] px-[50px] mobile:px-5" ref={ref}>
         <h2 className="pl-[30px] text-[40px] tablet:text-[30px] mobile:text-[25px] border-t-[2px] border-black pt-[10px] text-center font-bold">
           Skills
         </h2>
