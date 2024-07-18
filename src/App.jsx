@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useLayoutEffect } from "react";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const welcomeRef = useRef(null);
@@ -56,6 +57,7 @@ function App() {
       <Skills ref={skillsRef} />
       <Projects ref={projectRef} />
       <Contact ref={contactRef} />
+      <Footer />
     </div>
   );
 }
