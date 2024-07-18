@@ -17,7 +17,7 @@ const About = forwardRef((props, ref) => {
       className="py-[78px] px-[50px] tablet:px-[30px] mobile:px-[30px]"
       ref={ref}
     >
-      <h2 className="px-[30px] text-[2.5rem] border-t-[2px] border-black pt-[10px] text-center font-bold">
+      <h2 className="px-[30px] text-[40px] tablet:text-[30px] mobile:text-[25px] border-t-[2px] border-black pt-[10px] text-center font-bold">
         About
       </h2>
       <div className="flex tablet:flex-col mobile:flex-col mt-3">
@@ -46,10 +46,10 @@ const About = forwardRef((props, ref) => {
         </div>
         <div className="w-[60%] tablet:w-full mobile:w-full">
           <div className="px-[100px] pt-[80px] tablet:pt-[50px] mobile:pt-[20px] tablet:px-5 mobile:px-0">
-            <h2 className="text-[30px] tablet:text-[25px] mobile:text-[20px] tablet:text-center mobile:text-center font-NotoSansKR_Light text-[#4b89dc]">
+            <h2 className="px-10 text-[30px] tablet:text-[25px] mobile:text-[20px] font-NotoSansKR_Light text-[#4b89dc]">
               업무에 대한 책임감과 팀과의 협력을 중심으로
             </h2>
-            <div className="text-[20px] pt-[35px] tablet:text-[18px] mobile:text-[14px] px-10">
+            <div className="text-[20px] pt-[35px] tablet:pt-[20px] mobile:pt-[15px] tablet:text-[18px] mobile:text-[14px] px-10">
               <p>
                 안녕하세요 책임감 있게 주어진 일을 완수하고 팀과의 협력으로
                 목표를 달성하는 개발자 최민식 입니다.

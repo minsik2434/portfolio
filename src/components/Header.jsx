@@ -25,11 +25,7 @@ function Header({
   };
 
   const onHbtnClick = () => {
-    if (hBtnState === false) {
-      setHbtnState(true);
-    } else {
-      setHbtnState(false);
-    }
+    setHbtnState((prevState) => !prevState);
   };
 
   useEffect(() => {
