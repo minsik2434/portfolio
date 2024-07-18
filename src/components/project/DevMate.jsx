@@ -8,6 +8,23 @@ import boardDetail from "../../assets/devmate/boardDetail.png";
 import profile from "../../assets/devmate/profile.png";
 import ImgSwiper from "../ImgSwiper";
 function DevMate() {
+  const siteLink = () => {
+    window.location.href = "https://devmate-fe.vercel.app";
+  };
+
+  const frontEnd = () => {
+    window.location.href = "https://github.com/minsik2434/DevMateFE";
+  };
+
+  const backEnd = () => {
+    window.location.href = "https://github.com/minsik2434/DevMateBE";
+  };
+
+  const notion = () => {
+    window.location.href =
+      "https://www.notion.so/DevMate-cd8e323d3c744ad8a3659973e7e77274";
+  };
+
   const imageSrcs = [main, login, signup, board, board2, boardDetail, profile];
   return (
     <div className="pt-[20px] px-[30px]">
@@ -21,7 +38,7 @@ function DevMate() {
           <div className="mobile:hidden tablet:hidden">
             <ImgSwiper imageSrcs={imageSrcs} />
           </div>
-          <ul className="list-disc text-[18px] mobile:text-[14px] mt-[50px] tablet:mt-[10px] mobile:mt-[5px] mobile:text-nowrap flex flex-col gap-2 pl-5">
+          <ul className="list-disc text-[18px] mt-[50px] tablet:mt-[10px] mobile:mt-[5px] mobile:text-nowrap flex flex-col gap-2 pl-5">
             <li>
               <div className="flex gap-[10px]">
                 <span>인원</span>:<span>2</span>
@@ -155,49 +172,77 @@ function DevMate() {
             </ul>
           </div>
           <div className="py-[10px]">
-            <ul className="list-disc ml-5">
+            <ul className="list-disc ml-5 flex flex-col gap-2">
               <li>
                 <div>
                   <span>사이트 URL : </span>
                   <a
-                    className="underline text-blue-400"
+                    className="underline text-blue-400 mobile:hidden"
                     href="https://devmate-fe.vercel.app"
                   >
                     https://devmate-fe.vercel.app
                   </a>
+                  <button
+                    type="button"
+                    className="px-2 bg-[#495057] text-white tablet:hidden desktop:hidden hover:bg-[#343a40] rounded-md"
+                    onClick={siteLink}
+                  >
+                    바로가기
+                  </button>
                 </div>
               </li>
               <li>
                 <div>
                   <span>프론드엔드 깃허브 : </span>
                   <a
-                    className="underline text-blue-400"
+                    className="underline text-blue-400 mobile:hidden"
                     href="https://github.com/minsik2434/DevMateFE"
                   >
                     https://github.com/minsik2434/DevMateFE
                   </a>
+                  <button
+                    type="button"
+                    className="px-2 bg-[#495057] text-white tablet:hidden desktop:hidden hover:bg-[#343a40] rounded-md"
+                    onClick={frontEnd}
+                  >
+                    바로가기
+                  </button>
                 </div>
               </li>
               <li>
                 <div>
                   <span>백엔드 깃허브 : </span>
                   <a
-                    className="underline text-blue-400"
+                    className="underline text-blue-400 mobile:hidden"
                     href="https://github.com/minsik2434/DevMateBE"
                   >
                     https://github.com/minsik2434/DevMateBE
                   </a>
+                  <button
+                    type="button"
+                    className="px-2 bg-[#495057] text-white tablet:hidden desktop:hidden hover:bg-[#343a40] rounded-md"
+                    onClick={backEnd}
+                  >
+                    바로가기
+                  </button>
                 </div>
               </li>
               <li>
                 <div className="flex  text-nowrap">
                   <span>프로젝트 기획 : </span>
                   <a
-                    className="underline text-blue-400"
+                    className="underline text-blue-400 mobile:hidden"
                     href="https://www.notion.so/DevMate-cd8e323d3c744ad8a3659973e7e77274"
                   >
                     기획 노션
                   </a>
+                  <button
+                    type="button"
+                    className="px-2 bg-[#495057] text-white hover:bg-[#343a40] tablet:hidden desktop:hidden rounded-md"
+                    onClick={notion}
+                  >
+                    바로가기
+                  </button>
                 </div>
               </li>
             </ul>

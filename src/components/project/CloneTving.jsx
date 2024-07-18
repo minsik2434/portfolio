@@ -20,6 +20,18 @@ function CloneTving() {
     content,
     search,
   ];
+  const siteLink = () => {
+    window.location.href = "https://clone-tving.vercel.app";
+  };
+
+  const frontEnd = () => {
+    window.location.href = "https://github.com/hoyeonjigi/CloneTving";
+  };
+
+  const backEnd = () => {
+    window.location.href = "https://github.com/hoyeonjigi/CloneTving_BackEnd";
+  };
+
   return (
     <div className="pt-[20px] px-[30px]">
       <h2 className="text-[30px] text-center font-semibold">Clone-Tving</h2>
@@ -32,7 +44,7 @@ function CloneTving() {
           <div className="mobile:hidden tablet:hidden">
             <ImgSwiper imageSrcs={imageSrcs} />
           </div>
-          <ul className="list-disc text-[18px] mobile:text-[14px] mt-[50px] tablet:mt-[10px] mobile:mt-[5px] mobile:text-nowrap flex flex-col gap-2 pl-5">
+          <ul className="list-disc text-[18px] mt-[50px] tablet:mt-[10px] mobile:mt-[5px] mobile:text-nowrap flex flex-col gap-2 pl-5">
             <li>
               <div className="flex gap-[10px]">
                 <span>인원</span>:<span>4</span>
@@ -144,38 +156,59 @@ function CloneTving() {
             </ul>
           </div>
           <div className="py-[10px]">
-            <ul className="list-disc ml-5">
+            <ul className="list-disc ml-5 flex flex-col gap-2">
               <li>
                 <div>
                   <span>사이트 URL : </span>
                   <a
-                    className="underline text-blue-400"
+                    className="underline text-blue-400 mobile:hidden"
                     href="https://devmate-fe.vercel.app"
                   >
                     https://clone-tving.vercel.app
                   </a>
+                  <button
+                    type="button"
+                    className="px-2 bg-[#495057] text-white hover:bg-[#343a40] tablet:hidden desktop:hidden rounded-md"
+                    onClick={siteLink}
+                  >
+                    바로가기
+                  </button>
                 </div>
               </li>
               <li>
                 <div>
                   <span>프론드엔드 깃허브 : </span>
                   <a
-                    className="underline text-blue-400"
+                    className="underline text-blue-400 mobile:hidden"
                     href="https://github.com/hoyeonjigi/CloneTving"
                   >
                     https://github.com/hoyeonjigi/CloneTving
                   </a>
+                  <button
+                    type="button"
+                    className="px-2 bg-[#495057] text-white hover:bg-[#343a40] tablet:hidden desktop:hidden rounded-md"
+                    onClick={frontEnd}
+                  >
+                    바로가기
+                  </button>
                 </div>
               </li>
               <li>
                 <div>
                   <span className="text-nowrap">백엔드 깃허브 : </span>
                   <a
-                    className="underline text-blue-400"
+                    className="underline text-blue-400 mobile:hidden"
                     href="https://github.com/hoyeonjigi/CloneTving_BackEnd"
                   >
                     https://github.com/hoyeonjigi/CloneTving_BackEnd
                   </a>
+                  <button
+                    type="button"
+                    className="px-2 bg-[#495057] text-white hover:bg-[#343a40] tablet:hidden desktop:hidden rounded-md"
+                    onClick={backEnd}
+                  >
+                    바로가기
+                  </button>
                 </div>
               </li>
             </ul>

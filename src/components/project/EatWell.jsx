@@ -12,6 +12,14 @@ import statistic from "../../assets/EatWell/statistics.png";
 import timeline from "../../assets/EatWell/timeline.png";
 import barcode from "../../assets/EatWell/barcode.png";
 function EatWell() {
+  const notion = () => {
+    window.location.href =
+      "https://flower-name-0b3.notion.site/ffcaa57ca30f4e3d9d06e8410d9d245f";
+  };
+
+  const github = () => {
+    window.location.href = "https://github.com/minsik2434/hs_CapstoneDesign";
+  };
   const imageSrcs = [
     init1,
     init2,
@@ -186,33 +194,53 @@ function EatWell() {
                 <div>
                   <span>시연 영상 : </span>
                   <a
-                    className="underline text-blue-400"
+                    className="underline text-blue-400 mobile:hidden"
                     href="https://devmate-fe.vercel.app"
                   >
                     https://devmate-fe.vercel.app
                   </a>
+                  <button
+                    type="button"
+                    className="px-2 bg-[#495057] text-white hover:bg-[#343a40] tablet:hidden desktop:hidden rounded-md"
+                  >
+                    바로가기
+                  </button>
                 </div>
               </li>
               <li>
                 <div className="flex  text-nowrap">
                   <span>프로젝트 기획 및 상세정보 : </span>
                   <a
-                    className="underline text-blue-400"
+                    className="underline text-blue-400 mobile:hidden"
                     href="https://flower-name-0b3.notion.site/ffcaa57ca30f4e3d9d06e8410d9d245f"
                   >
                     기획 노션
                   </a>
+                  <button
+                    type="button"
+                    className="px-2 bg-[#495057] text-white hover:bg-[#343a40] tablet:hidden desktop:hidden rounded-md"
+                    onClick={notion}
+                  >
+                    바로가기
+                  </button>
                 </div>
               </li>
               <li>
                 <div className="flex  text-nowrap">
                   <span>깃허브 : </span>
                   <a
-                    className="underline text-blue-400"
+                    className="underline text-blue-400 mobile:hidden"
                     href="https://github.com/minsik2434/hs_CapstoneDesign"
                   >
                     https://github.com/minsik2434/hs_CapstoneDesign
                   </a>
+                  <button
+                    type="button"
+                    className="px-2 bg-[#495057] text-white hover:bg-[#343a40] tablet:hidden desktop:hidden rounded-md"
+                    onClick={github}
+                  >
+                    바로가기
+                  </button>
                 </div>
               </li>
             </ul>
