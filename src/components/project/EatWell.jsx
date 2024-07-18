@@ -29,10 +29,15 @@ function EatWell() {
     <div className="pt-[20px] px-[30px]">
       <h2 className="text-[30px] text-center font-semibold">잘먹고 살자</h2>
       <p className="text-center">개인맞춤형 식단 영양 분석 앱</p>
-      <div className="flex gap-[50px] px-[40px] py-[50px]">
-        <div className="w-[50%] image">
-          <ImgSwiper imageSrcs={imageSrcs} />
-          <ul className="list-disc text-[18px] mt-[50px] flex flex-col gap-2 pl-5">
+      <div className="desktop:hidden w-[100%] mt-2 image">
+        <ImgSwiper imageSrcs={imageSrcs} />
+      </div>
+      <div className="flex gap-[50px] tablet:flex-col-reverse mobile:flex-col-reverse tablet:gap-[20px] mobile:gap-[10px] px-[40px] tablet:px-5 tablet:py-[20px] mobile:px-0 py-[50px]">
+        <div className="w-[50%] image tablet:w-full mobile:w-full">
+          <div className="mobile:hidden tablet:hidden">
+            <ImgSwiper imageSrcs={imageSrcs} />
+          </div>
+          <ul className="list-disc text-[18px] mobile:text-[14px] mt-[50px] tablet:mt-[10px] mobile:mt-[5px] mobile:text-nowrap flex flex-col gap-2 pl-5">
             <li>
               <div className="flex gap-[10px]">
                 <span>인원</span>:<span>4</span>
@@ -46,15 +51,15 @@ function EatWell() {
           </ul>
           <h2 className="text-[20px] mt-[10px]">역할 및 기여</h2>
           <div className="flex flex-col gap-1">
-            <div className="flex gap-2">
-              <span className="text-nowrap">기획</span> :
+            <div className="flex mobile:block gap-2">
+              <span className="text-nowrap font-bold">기획</span> :
               <span>
                 프로젝트 목적과 개요, 기대효과, 대상 사용자, SWOT 분석, 유사 앱
                 비교, 요구사항 분석 등 전반적인 프로젝트를 기획
               </span>
             </div>
-            <div className="flex gap-2">
-              <span className="text-nowrap">데이터베이스 설계</span> :
+            <div className="flex mobile:block gap-2">
+              <span className="text-nowrap font-bold">데이터베이스 설계</span> :
               <span>
                 데이터베이스 모델링, SQLite를 이용해 데이터베이스 구축, 공공
                 API(한국식품안전관리인증원_HACCP 제품이미지 및 포장지표기정보
@@ -62,23 +67,23 @@ function EatWell() {
                 데이터베이스 구성
               </span>
             </div>
-            <div className="flex gap-2">
-              <span className="text-nowrap">공공 API 파싱</span> :
+            <div className="flex mobile:block gap-2">
+              <span className="text-nowrap font-bold">공공 API 파싱</span> :
               <span>
                 공공 API(한국식품안전관리인증원_HACCP 제품이미지 및
                 포장지표기정보 바코드연계제품정보 식품의약품안전처 공공데이터)을
                 이용해 데이터 파싱
               </span>
             </div>
-            <div className="flex gap-2">
-              <span className="text-nowrap">CNN 모델 학습</span> :
+            <div className="flex mobile:block gap-2">
+              <span className="text-nowrap font-bold">CNN 모델 학습</span> :
               <span>
                 Python과 Tensorflow를 사용해 MobileNetV2 모델을 AI-Hub의 한식
                 데이터셋을 이용해 모델 학습
               </span>
             </div>
-            <div className="flex gap-2">
-              <span className="text-nowrap">핵심 로직 구현</span> :
+            <div className="flex mobile:block gap-2">
+              <span className="text-nowrap font-bold">핵심 로직 구현</span> :
               <span>
                 사용자 정보 데이터 관련 로직(저장,수정), 사용자 식단 저장,수정
                 월별 통계, 사진 인식 등 핵심 로직 구현
@@ -86,7 +91,7 @@ function EatWell() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-[40%]">
+        <div className="flex flex-col w-[40%] tablet:w-full mobile:w-full">
           <h3 className="text-[20px] font-semibol py-[10px]">Description</h3>
           <p className="font-NotoSansKR_Light">
             최근 건강을 관리하는 인구가 증가하고 있고, 음식마다 영양 정보를
@@ -105,54 +110,56 @@ function EatWell() {
             <h3 className="text-[20px]">주요기능</h3>
             <ul className="font-NotoSansKR_Light list-disc ml-5">
               <li>
-                <div className="flex">
+                <div className="flex mobile:block">
                   <span className="text-nowrap">사용자 정보관리 :</span>
-                  <span>
+                  <span className="font-NotoSansKR_Light">
                     성별, 키, 몸무게, 나이, 활동량을 계산해 사용자 권장 칼로리
                     계산 및 제공. 알레르기, 지병을 설정
                   </span>
                 </div>
               </li>
               <li>
-                <div className="flex">
+                <div className="flex mobile:block">
                   <span className="text-nowrap">식단(메인) :</span>
-                  <span>
+                  <span className="font-NotoSansKR_Light">
                     당일 섭취 영양소 현황 확인(탄,단,지,당류,나트륨 등등), 당일
                     섭취 식단 기록 확인(아침,점심,저녁)
                   </span>
                 </div>
               </li>
               <li>
-                <div className="flex">
+                <div className="flex mobile:block">
                   <span className="text-nowrap">기록하기 :</span>
-                  <span>
+                  <span className="font-NotoSansKR_Light">
                     바코드 스캔, 사진인식, 검색, 음식 상세 정보 제공, 날짜와
                     시간을 선택해 식단 기록, 사용자 맞춤 알레르기 유발 성분 표시
                   </span>
                 </div>
               </li>
               <li>
-                <div className="flex">
+                <div className="flex mobile:block">
                   <span className="text-nowrap">달력 :</span>
-                  <span>
+                  <span className="font-NotoSansKR_Light">
                     권장 칼로리보다 많은 칼로리 섭취 날짜 표기, 특정 날짜에
-                    섭취한 음식 기록 확인{" "}
+                    섭취한 음식 기록 확인
                   </span>
                 </div>
               </li>
               <li>
-                <div className="flex">
+                <div className="flex mobile:block">
                   <span className="text-nowrap">통계 :</span>
-                  <span>
+                  <span className="font-NotoSansKR_Light">
                     주에 제일 많이 먹은 음식 정보 제공, 그래프로 일,주,월별
                     영양성분 통계 제공, 전주 통계와 비교해 정보를 제공
                   </span>
                 </div>
               </li>
               <li>
-                <div className="flex">
+                <div className="flex mobile:block">
                   <span className="text-nowrap">마이페이지 :</span>
-                  <span>사용자 정보 재설정, 타임라인, 알람</span>
+                  <span className="font-NotoSansKR_Light">
+                    사용자 정보 재설정, 타임라인, 알람
+                  </span>
                 </div>
               </li>
             </ul>
