@@ -3,6 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.js", "./src/**/*.jsx", "./src/*.jsx"],
   theme: {
     screens: {
+      desktop: { min: "1025px" },
       tablet: { min: "768px", max: "1024px" },
       mobile: { min: "320px", max: "767px" },
     },

@@ -13,14 +13,20 @@ const About = forwardRef((props, ref) => {
   };
 
   return (
-    <div className="py-[78px] px-[50px]" ref={ref}>
-      <h2 className="pl-[30px] text-[40px] border-t-[2px] border-black pt-[10px] text-center font-bold">
+    <div
+      className="py-[78px] px-[50px] tablet:px-[30px] mobile:px-[30px]"
+      ref={ref}
+    >
+      <h2 className="px-[30px] text-[2.5rem] border-t-[2px] border-black pt-[10px] text-center font-bold">
         About
       </h2>
-      <div className="flex">
-        <div className="flex flex-col w-[40%] items-center bg-[#89b2e9] py-[40px] rounded-tl-[10px] rounded-bl-[10px] rounded-br-[70px] shadow-xl">
-          <img src={my} className="w-[50%] rounded-full"></img>
-          <div className="grid grid-cols-[10%_60%] gap-x-[50px] gap-y-[20px] justify-center px-[10px] w-[80%] mt-[20px] text-[20px] font-semibold">
+      <div className="flex tablet:flex-col mobile:flex-col mt-3">
+        <div className="flex desktop:flex-col mobile:flex-col w-[40%] mobile:w-full tablet:w-full items-center bg-[#89b2e9] py-[40px] rounded-tl-[10px] rounded-bl-[10px] rounded-br-[70px] shadow-xl">
+          <img
+            src={my}
+            className="w-[50%] tablet:w-[30%] mobile:w-[50%] tablet:ml-10 rounded-full"
+          ></img>
+          <div className="grid grid-cols-[10%_60%] gap-x-[20px] gap-y-[20px] tablet:gap-y-[13px] justify-center px-[10px] mobile:px-0 w-[80%] mt-[20px] text-[1rem] font-semibold">
             <img src={name} className="w-[35px]" /> <span>최민식</span>
             <img src={birth} className="w-[35px]" /> <span>1999-12-25</span>
             <img src={email} className="w-[35px]" />
@@ -38,12 +44,12 @@ const About = forwardRef((props, ref) => {
             </button>
           </div>
         </div>
-        <div className="w-[60%]">
-          <div className="px-[100px] pt-[80px]">
-            <h2 className="text-[30px] font-NotoSansKR_Light text-[#4b89dc]">
+        <div className="w-[60%] tablet:w-full mobile:w-full">
+          <div className="px-[100px] pt-[80px] tablet:pt-[50px] mobile:pt-[20px] tablet:px-5 mobile:px-0">
+            <h2 className="text-[30px] tablet:text-[25px] mobile:text-[20px] tablet:text-center mobile:text-center font-NotoSansKR_Light text-[#4b89dc]">
               업무에 대한 책임감과 팀과의 협력을 중심으로
             </h2>
-            <div className="text-[20px] pt-[35px]">
+            <div className="text-[20px] pt-[35px] tablet:text-[18px] mobile:text-[14px] px-10">
               <p>
                 안녕하세요 책임감 있게 주어진 일을 완수하고 팀과의 협력으로
                 목표를 달성하는 개발자 최민식 입니다.
