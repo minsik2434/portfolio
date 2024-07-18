@@ -24,37 +24,47 @@ function CloneTving() {
     <div className="pt-[20px] px-[30px]">
       <h2 className="text-[30px] text-center font-semibold">Clone-Tving</h2>
       <p className="text-center">OTT Tving 클론코딩 사이트</p>
-      <div className="flex gap-[50px] px-[40px] py-[50px]">
-        <div className="w-[50%] h-full image">
-          <ImgSwiper imageSrcs={imageSrcs} />
-          <div className="flex flex-col gap-2">
-            <ul className="list-disc text-[18px] mt-[50px] flex flex-col gap-2 pl-5">
-              <li>
-                <div className="flex gap-[10px]">
-                  <span>인원</span>:<span>4</span>
-                </div>
-              </li>
-              <li>
-                <div className="flex gap-[10px]">
-                  <span>기간</span>:<span>2023.12 ~ 2024.04</span>
-                </div>
-              </li>
-            </ul>
-            <h2 className="text-[20px] mt-[10px]">역할 및 기여</h2>
-            <div className="flex gap-2">
-              <span className="text-nowrap">데이터베이스 설계</span> :
-              <span>데이터베이스 모델링, MySQL을 사용해 데이터베이스 구축</span>
-            </div>
-            <div className="flex gap-2">
-              <span className="text-nowrap">API 구현</span> :
-              <span>
-                프로필 CRUD 로직 구현, 콘텐츠 관련 로직 구현, 장르 조회 로직
-                구현, 쿼리 성능 최적화
-              </span>
+      <div className="desktop:hidden w-[100%] mt-2 image">
+        <ImgSwiper imageSrcs={imageSrcs} />
+      </div>
+      <div className="flex gap-[50px] tablet:flex-col-reverse mobile:flex-col-reverse tablet:gap-[20px] mobile:gap-[10px] px-[40px] tablet:px-5 tablet:py-[20px] mobile:px-0 py-[50px]">
+        <div className="w-[50%] tablet:w-full mobile:w-full image">
+          <div className="mobile:hidden tablet:hidden">
+            <ImgSwiper imageSrcs={imageSrcs} />
+          </div>
+          <ul className="list-disc text-[18px] mobile:text-[14px] mt-[50px] tablet:mt-[10px] mobile:mt-[5px] mobile:text-nowrap flex flex-col gap-2 pl-5">
+            <li>
+              <div className="flex gap-[10px]">
+                <span>인원</span>:<span>4</span>
+              </div>
+            </li>
+            <li>
+              <div className="flex gap-[10px]">
+                <span>기간</span>:<span>2023.12 ~ 2024.04</span>
+              </div>
+            </li>
+          </ul>
+          <h2 className="text-[20px] mt-[10px]">역할 및 기여</h2>
+          <div>
+            <div className="flex flex-col gap-1">
+              <div className="flex mobile:block gap-2">
+                <span className="text-nowrap font-bold">데이터베이스 설계</span>{" "}
+                :
+                <span>
+                  데이터베이스 모델링, MySQL을 사용해 데이터베이스 구축
+                </span>
+              </div>
+              <div className="flex mobile:block gap-2">
+                <span className="text-nowrap font-bold">API 구현</span> :
+                <span>
+                  프로필 CRUD 로직 구현, 콘텐츠 관련 로직 구현, 장르 조회 로직
+                  구현, 쿼리 성능 최적화
+                </span>
+              </div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-[40%]">
+        <div className="flex flex-col w-[40%] tablet:w-full mobile:w-full">
           <h3 className="text-[20px] font-semibol py-[10px]">Description</h3>
           <p className="font-NotoSansKR_Light">
             학습 목적으로 OTT Tving 사이트 클론 코딩으로 구현한 웹 페이지
@@ -70,23 +80,27 @@ function CloneTving() {
           </p>
           <div className="mt-[10px]">
             <h3 className="text-[20px]">주요기능</h3>
-            <ul className="font-NotoSansKR_Light list-disc ml-5">
+            <ul className="list-disc ml-5">
               <li>
-                <div className="flex">
-                  <span className="text-nowrap">회원 관리 :</span>
-                  <span>로그인, 로그아웃, 회원 등록</span>
+                <div className="flex mobile:block">
+                  <span className="text-nowrap font-bold">회원 관리 :</span>
+                  <span className="font-NotoSansKR_Light">
+                    로그인, 로그아웃, 회원 등록
+                  </span>
                 </div>
               </li>
               <li>
-                <div className="flex">
-                  <span className="text-nowrap">프로필 :</span>
-                  <span>프로필 등록, 프로필 수정, 프로필 삭제</span>
+                <div className="flex mobile:block">
+                  <span className="text-nowrap font-bold">프로필 :</span>
+                  <span className="font-NotoSansKR_Light">
+                    프로필 등록, 프로필 수정, 프로필 삭제
+                  </span>
                 </div>
               </li>
               <li>
-                <div className="flex">
-                  <span className="text-nowrap">콘텐츠 :</span>
-                  <span>
+                <div className="flex mobile:block">
+                  <span className="text-nowrap font-bold">콘텐츠 :</span>
+                  <span className="font-NotoSansKR_Light">
                     최신순, 인기순 정렬, 장르별 콘텐츠 조회, 콘텐츠 타입별 조회,
                     검색어를 통해 콘텐츠 제목 조회, 콘텐츠 장르와 콘텐츠 소개글
                     등 상세 정보 조회, 조회수 증가
@@ -94,9 +108,11 @@ function CloneTving() {
                 </div>
               </li>
               <li>
-                <div className="flex">
-                  <span className="text-nowrap">평가 :</span>
-                  <span>한줄평 등록, 평점 등록, 수정, 삭제</span>
+                <div className="flex mobile:block">
+                  <span className="text-nowrap font-bold">평가 :</span>
+                  <span className="font-NotoSansKR_Light">
+                    한줄평 등록, 평점 등록, 수정, 삭제
+                  </span>
                 </div>
               </li>
             </ul>

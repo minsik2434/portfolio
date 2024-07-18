@@ -13,7 +13,7 @@ function DevMate() {
     <div className="pt-[20px] px-[30px]">
       <h2 className="text-[30px] text-center font-semibold">DevMate</h2>
       <p className="text-center">개발자 커뮤니티 사이트</p>
-      <div className="desktop:hidden w-[100%] image">
+      <div className="desktop:hidden w-[100%] mt-2 image">
         <ImgSwiper imageSrcs={imageSrcs} />
       </div>
       <div className="flex gap-[50px] tablet:flex-col-reverse mobile:flex-col-reverse tablet:gap-[20px] mobile:gap-[10px] px-[40px] tablet:px-5 tablet:py-[20px] mobile:px-0 py-[50px]">
@@ -23,7 +23,7 @@ function DevMate() {
           </div>
           <ul className="list-disc text-[18px] mobile:text-[14px] mt-[50px] tablet:mt-[10px] mobile:mt-[5px] mobile:text-nowrap flex flex-col gap-2 pl-5">
             <li>
-              <div className="flex mobile: gap-[10px]">
+              <div className="flex gap-[10px]">
                 <span>인원</span>:<span>2</span>
               </div>
             </li>
@@ -53,7 +53,7 @@ function DevMate() {
               <div className="flex mobile:block gap-2">
                 <span className="text-nowrap font-bold">
                   리액트 컴포넌트 구현
-                </span>{" "}
+                </span>
                 :
                 <span>
                   리액트를 사용해 페이지 마크업과 컴포넌트 구현 및 상태관리,
