@@ -24,7 +24,7 @@ function DevMate() {
             </li>
             <li>
               <div className="flex gap-[10px]">
-                <span>기간</span>:<sapn>2024.05 ~ 2024.06</sapn>
+                <span>기간</span>:<span>2024.05 ~ 2024.06</span>
               </div>
             </li>
           </ul>

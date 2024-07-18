@@ -40,7 +40,7 @@ function EatWell() {
             </li>
             <li>
               <div className="flex gap-[10px]">
-                <span>기간</span>:<sapn>2023.05 ~ 2024.10</sapn>
+                <span>기간</span>:<span>2023.05 ~ 2024.10</span>
               </div>
             </li>
           </ul>
