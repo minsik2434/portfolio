@@ -5,13 +5,13 @@ import talk from "../assets/talk.png";
 function Footer() {
   return (
     <div className="w-full bg-[#262626]">
-      <div className="py-16 px-16">
-        <div className="border-b-4 py-2 border-white">
-          <span className="text-white font-bold text-[25px]">
+      <div className="py-16 px-16 tablet:py-10 mobile:py-7">
+        <div className="border-b-4 tablet:border-b-3 mobile:border-b-2 py-2 border-white">
+          <span className="text-white font-bold text-[25px] tablet:text-[20px] mobile:text-[15px]">
             Minsik&apos;s Portfolio
           </span>
         </div>
-        <div className="py-10">
+        <div className="py-10 tablet:py-5 mobile:py-4">
           <ul className="flex items-center justify-center gap-10">
             <li className="bg-white p-1 rounded-xl">
               <a href="https://github.com/minsik2434">
@@ -31,7 +31,9 @@ function Footer() {
           </ul>
         </div>
         <div className="text-center">
-          <span className="text-white">@choiminsik All rights reserved</span>
+          <span className="text-white tablet:text-[14px] mobile:text-[12px]">
+            @choiminsik All rights reserved
+          </span>
         </div>
       </div>
     </div>

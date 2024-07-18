@@ -48,15 +48,15 @@ const Contact = forwardRef((props, ref) => {
       );
   };
   return (
-    <div className="h-[100vh]" ref={ref}>
+    <div ref={ref}>
       <ToastContainer position="top-center" />
-      <div className="pt-[78px] pb-[50px] px-[50px] h-full">
-        <h2 className="pl-[30px] text-[40px] border-t-[2px] border-black pt-[10px] text-center font-bold">
+      <div className="pt-[78px] pb-[50px] px-[50px] mobile:px-5 h-full">
+        <h2 className="pl-[30px] text-[40px] tablet:text-[30px] mobile:text-[25px] border-t-[2px] border-black pt-[10px] text-center font-bold">
           Contact
         </h2>
-        <div className="flex mt-20 justify-around">
-          <div className="text-[20px] flex flex-col pl-20 justify-center gap-[30px]">
-            <div className="flex flex-col items-center gap-3">
+        <div className="flex tablet:flex-col mobile:flex-col mt-20 mobile:mt-5 justify-around">
+          <div className="text-[20px] flex flex-col pl-20 mobile:pl-0 tablet:pl-0 justify-center gap-[30px] mobile:gap-2">
+            <div className="flex flex-col items-center gap-1">
               <div className="flex items-center gap-[10px]">
                 <img src={email} className="w-[35px]" />
                 <h2 className="font-bold">Email</h2>
@@ -70,7 +70,7 @@ const Contact = forwardRef((props, ref) => {
                 </a>
               </div>
             </div>
-            <div className="flex flex-col items-center gap-3">
+            <div className="flex flex-col items-center gap-1">
               <div className="flex items-center gap-[10px]">
                 <img src={github} className="w-[35px]" />
                 <h2 className="font-bold">Github</h2>
@@ -84,7 +84,7 @@ const Contact = forwardRef((props, ref) => {
                 </a>
               </div>
             </div>
-            <div className="flex flex-col items-center gap-3">
+            <div className="flex flex-col items-center gap-1">
               <div className="flex items-center gap-[10px]">
                 <img src={telephone} className="w-[35px]" />
                 <h2 className="font-bold">Phone</h2>
@@ -96,7 +96,7 @@ const Contact = forwardRef((props, ref) => {
               </div>
             </div>
           </div>
-          <div className="border border-gray-200 rounded-lg px-7 py-5 w-[50%] shadow-lg">
+          <div className="border mobile:mt-10 tablet:mt-10 border-gray-200 rounded-lg px-7 py-5 tablet:w-full mobile:w-full shadow-lg">
             <form ref={emailForm} onSubmit={sendEmail}>
               <div className="flex flex-col gap-3">
                 <div className="flex justify-center gap-5">
