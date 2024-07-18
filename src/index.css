@@ -9,13 +9,13 @@
 }
 
 .image .swiper-button-next {
-  background: url(src/assets/imgbtn.png) no-repeat;
+  background: url(assets/imgbtn.png) no-repeat;
   background-size: 50% auto;
   background-position: center;
 }
 
 .image .swiper-button-prev {
-  background: url(src/assets/imgbtn.png) no-repeat;
+  background: url(assets/imgbtn.png) no-repeat;
   background-size: 50% auto;
   background-position: center;
   transform: rotate(180deg);

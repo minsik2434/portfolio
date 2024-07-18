@@ -55,7 +55,7 @@ const Contact = forwardRef((props, ref) => {
           Contact
         </h2>
         <div className="flex tablet:flex-col mobile:flex-col mt-20 mobile:mt-5 justify-around">
-          <div className="text-[20px] flex flex-col pl-20 mobile:pl-0 tablet:pl-0 justify-center gap-[30px] mobile:gap-2">
+          <div className="text-[20px] flex flex-col justify-center gap-[30px] mobile:gap-2">
             <div className="flex flex-col items-center gap-1">
               <div className="flex items-center gap-[10px]">
                 <img src={email} className="w-[35px]" />
@@ -96,9 +96,9 @@ const Contact = forwardRef((props, ref) => {
               </div>
             </div>
           </div>
-          <div className="border mobile:mt-10 tablet:mt-10 border-gray-200 rounded-lg px-7 py-5 tablet:w-full mobile:w-full shadow-lg">
+          <div className="w-[50%] border mobile:mt-10 tablet:mt-10 border-gray-200 rounded-lg px-7 py-5 tablet:w-full mobile:w-full shadow-lg">
             <form ref={emailForm} onSubmit={sendEmail}>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3 w-full">
                 <div className="flex justify-center gap-5">
                   <div className="flex flex-col w-full">
                     <span className="font-NotoSansKR_Light">Name</span>
