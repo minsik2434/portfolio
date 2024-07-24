@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import CloneTving from "./project/CloneTving";
 import { useRef } from "react";
 import EatWell from "./project/EatWell";
+import MiniCinema from "./project/MiniCinema";
 
 const Projects = forwardRef((props, ref) => {
   const divRef = useRef(null);
@@ -35,6 +36,9 @@ const Projects = forwardRef((props, ref) => {
           </SwiperSlide>
           <SwiperSlide className="h-full">
             <EatWell />
+          </SwiperSlide>
+          <SwiperSlide className="h-full">
+            <MiniCinema />
           </SwiperSlide>
         </Swiper>
       </div>

@@ -7,7 +7,7 @@ import profile from "../../assets/clonetving/profile.png";
 import profileEdit from "../../assets/clonetving/profileEdit.png";
 import content from "../../assets/clonetving/content.png";
 import search from "../../assets/clonetving/search.png";
-
+import main from "../../assets/clonetving/main.png";
 import ImgSwiper from "../ImgSwiper";
 function CloneTving() {
   const imageSrcs = [
@@ -17,6 +17,7 @@ function CloneTving() {
     login2,
     profile,
     profileEdit,
+    main,
     content,
     search,
   ];
@@ -52,7 +53,7 @@ function CloneTving() {
             </li>
             <li>
               <div className="flex gap-[10px]">
-                <span>기간</span>:<span>2023.12 ~ 2024.04</span>
+                <span>기간</span>:<span>2023.6 ~ 2024.07</span>
               </div>
             </li>
           </ul>
@@ -60,7 +61,7 @@ function CloneTving() {
           <div>
             <div className="flex flex-col gap-1">
               <div className="flex mobile:block gap-2">
-                <span className="text-nowrap font-bold">데이터베이스 설계</span>{" "}
+                <span className="text-nowrap font-bold">데이터베이스 설계</span>
                 :
                 <span>
                   데이터베이스 모델링, MySQL을 사용해 데이터베이스 구축
@@ -162,7 +163,7 @@ function CloneTving() {
                   <span>사이트 URL : </span>
                   <a
                     className="underline text-blue-400 mobile:hidden"
-                    href="https://devmate-fe.vercel.app"
+                    href="https://clone-tving.vercel.app"
                   >
                     https://clone-tving.vercel.app
                   </a>
