@@ -195,9 +195,9 @@ function EatWell() {
                   <span>시연 영상 : </span>
                   <a
                     className="underline text-blue-400 mobile:hidden"
-                    href="https://devmate-fe.vercel.app"
+                    href="https://youtu.be/h7eitwUw1Dk"
                   >
-                    https://devmate-fe.vercel.app
+                    https://youtu.be/h7eitwUw1Dk
                   </a>
                   <button
                     type="button"
