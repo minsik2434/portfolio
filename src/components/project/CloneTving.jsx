@@ -53,7 +53,7 @@ function CloneTving() {
             </li>
             <li>
               <div className="flex gap-[10px]">
-                <span>기간</span>:<span>2023.6 ~ 2024.07</span>
+                <span>기간</span>:<span>2024.6 ~ 2024.07</span>
               </div>
             </li>
           </ul>
