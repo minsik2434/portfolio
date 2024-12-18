@@ -6,12 +6,16 @@ import name from "../assets/name.png";
 import birth from "../assets/birth.png";
 import grade from "../assets/grade.png";
 import github from "../assets/skills/github.png";
+import blog from "../assets/Blog.png";
 import { forwardRef } from "react";
 const About = forwardRef((props, ref) => {
   const githubLink = () => {
-    window.location.href = "https://github.com/minsik2434"; // 이동하고자 하는 URL로 변경
+    window.location.href = "https://github.com/minsik2434";
   };
 
+  const devBlogLink = () => {
+    window.location.href = "https://velog.io/@minsik2434/posts";
+  };
   return (
     <div
       className="py-[78px] px-[50px] tablet:px-[30px] mobile:px-[30px]"
@@ -41,6 +45,13 @@ const About = forwardRef((props, ref) => {
               onClick={githubLink}
             >
               GITHUB
+            </button>
+            <img src={blog} className="w-[35px]" />
+            <button
+              className="bg-[#1263ce] rounded-lg hover:bg-[#4b89dc]"
+              onClick={devBlogLink}
+            >
+              Blog
             </button>
           </div>
         </div>
