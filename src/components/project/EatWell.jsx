@@ -1,16 +1,5 @@
 import React from "react";
-import ImgSwiper from "../ImgSwiper";
-import init1 from "../../assets/EatWell/init1.png";
-import init2 from "../../assets/EatWell/init2.png";
-import main from "../../assets/EatWell/main.png";
-import picture from "../../assets/EatWell/picture.png";
-import record from "../../assets/EatWell/record.png";
-import search from "../../assets/EatWell/search.png";
-import record2 from "../../assets/EatWell/record2.png";
-import calendar from "../../assets/EatWell/calendar.png";
-import statistic from "../../assets/EatWell/statistics.png";
-import timeline from "../../assets/EatWell/timeline.png";
-import barcode from "../../assets/EatWell/barcode.png";
+import eatWell from "../../assets/EatWell/eatWell.gif";
 function EatWell() {
   const notion = () => {
     window.location.href =
@@ -20,30 +9,18 @@ function EatWell() {
   const github = () => {
     window.location.href = "https://github.com/minsik2434/hs_CapstoneDesign";
   };
-  const imageSrcs = [
-    init1,
-    init2,
-    main,
-    search,
-    barcode,
-    record,
-    picture,
-    record2,
-    calendar,
-    statistic,
-    timeline,
-  ];
+
   return (
     <div className="pt-[20px] px-[30px]">
       <h2 className="text-[30px] text-center font-semibold">잘먹고 살자</h2>
       <p className="text-center">개인맞춤형 식단 영양 분석 앱</p>
       <div className="desktop:hidden w-[100%] mt-2 image">
-        <ImgSwiper imageSrcs={imageSrcs} />
+        <img src={eatWell}/>
       </div>
       <div className="flex gap-[50px] tablet:flex-col-reverse mobile:flex-col-reverse tablet:gap-[20px] mobile:gap-[10px] px-[40px] tablet:px-5 tablet:py-[20px] mobile:px-0 py-[50px]">
         <div className="w-[50%] image tablet:w-full mobile:w-full">
           <div className="mobile:hidden tablet:hidden">
-            <ImgSwiper imageSrcs={imageSrcs} />
+            <img src={eatWell}/>
           </div>
           <ul className="list-disc text-[18px] mobile:text-[14px] mt-[50px] tablet:mt-[10px] mobile:mt-[5px] mobile:text-nowrap flex flex-col gap-2 pl-5">
             <li>

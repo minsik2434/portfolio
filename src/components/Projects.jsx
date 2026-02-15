@@ -10,6 +10,7 @@ import CloneTving from "./project/CloneTving";
 import { useRef } from "react";
 import EatWell from "./project/EatWell";
 import MiniCinema from "./project/MiniCinema";
+import Buynest from "./project/Buynest";
 
 const Projects = forwardRef((props, ref) => {
   const divRef = useRef(null);
@@ -27,7 +28,10 @@ const Projects = forwardRef((props, ref) => {
           pagination={{ clickable: true }}
           className=" bg-white rounded-3xl mt-[40px] shadow-xl"
           centeredSlides={true}
-        >
+        > 
+          <SwiperSlide className="h-full">
+            <Buynest />
+          </SwiperSlide>
           <SwiperSlide className="h-full">
             <DevMate />
           </SwiperSlide>

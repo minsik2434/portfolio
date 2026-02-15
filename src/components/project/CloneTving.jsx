@@ -1,30 +1,6 @@
 import React from "react";
-import onBoarding1 from "../../assets/clonetving/onBoarding1.png";
-import onBoarding2 from "../../assets/clonetving/onBoarding2.png";
-import login from "../../assets/clonetving/login.png";
-import login2 from "../../assets/clonetving/login2.png";
-import profile from "../../assets/clonetving/profile.png";
-import profileEdit from "../../assets/clonetving/profileEdit.png";
-import content from "../../assets/clonetving/content.png";
-import search from "../../assets/clonetving/search.png";
-import main from "../../assets/clonetving/main.png";
-import ImgSwiper from "../ImgSwiper";
+import cloneTving from "../../assets/clonetving/cloneTving.gif";
 function CloneTving() {
-  const imageSrcs = [
-    onBoarding1,
-    onBoarding2,
-    login,
-    login2,
-    profile,
-    profileEdit,
-    main,
-    content,
-    search,
-  ];
-  const siteLink = () => {
-    window.location.href = "https://clone-tving.vercel.app";
-  };
-
   const frontEnd = () => {
     window.location.href = "https://github.com/hoyeonjigi/CloneTving";
   };
@@ -38,12 +14,12 @@ function CloneTving() {
       <h2 className="text-[30px] text-center font-semibold">Clone-Tving</h2>
       <p className="text-center">OTT Tving 클론코딩 사이트</p>
       <div className="desktop:hidden w-[100%] mt-2 image">
-        <ImgSwiper imageSrcs={imageSrcs} />
+        <img src={cloneTving}/>
       </div>
       <div className="flex gap-[50px] tablet:flex-col-reverse mobile:flex-col-reverse tablet:gap-[20px] mobile:gap-[10px] px-[40px] tablet:px-5 tablet:py-[20px] mobile:px-0 py-[50px]">
         <div className="w-[50%] tablet:w-full mobile:w-full image">
           <div className="mobile:hidden tablet:hidden">
-            <ImgSwiper imageSrcs={imageSrcs} />
+            <img src={cloneTving}/>
           </div>
           <ul className="list-disc text-[18px] mt-[50px] tablet:mt-[10px] mobile:mt-[5px] mobile:text-nowrap flex flex-col gap-2 pl-5">
             <li>
@@ -74,6 +50,17 @@ function CloneTving() {
                   구현, 쿼리 성능 최적화
                 </span>
               </div>
+            </div>
+            <div className="mt-[20px] bg-gray-800 p-6 rounded-2xl border border-gray-700">
+            <h3 className="text-[22px] font-bold text-blue-400 mb-4 border-b border-gray-700 pb-2">Troubleshooting & Learnings</h3>
+              <ul className="list-disc ml-5 text-[15px] text-gray-300 space-y-3 leading-relaxed">
+                <li>
+                  <strong className="text-white">복잡한 필터링 동적 쿼리 처리:</strong> 다양한 조합(최신순, 인기순, 장르별 등)으로 콘텐츠를 검색해야 하는 요구사항을 처리하기 위해, JPA 메서드 이름 규칙 대신 <strong className="text-blue-300">Querydsl의 BooleanExpression을 활용한 동적 쿼리</strong>로 구현하여 코드 가독성과 유지보수성을 확보.
+                </li>
+                <li>
+                  <strong className="text-white">Open API 사용:</strong> 실제 OTT 서비스의 방대한 콘텐츠 데이터를 다뤄보기 위해 TMDB API를 연동
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -158,24 +145,6 @@ function CloneTving() {
           </div>
           <div className="py-[10px]">
             <ul className="list-disc ml-5 flex flex-col gap-2">
-              <li>
-                <div>
-                  <span>사이트 URL : </span>
-                  <a
-                    className="underline text-blue-400 mobile:hidden"
-                    href="https://clone-tving.vercel.app"
-                  >
-                    https://clone-tving.vercel.app
-                  </a>
-                  <button
-                    type="button"
-                    className="px-2 bg-[#495057] text-white hover:bg-[#343a40] tablet:hidden desktop:hidden rounded-md"
-                    onClick={siteLink}
-                  >
-                    바로가기
-                  </button>
-                </div>
-              </li>
               <li>
                 <div>
                   <span>프론드엔드 깃허브 : </span>

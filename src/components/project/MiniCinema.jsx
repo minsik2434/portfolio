@@ -1,25 +1,17 @@
 import React from "react";
-import ImgSwiper from "../ImgSwiper";
-import main from "../../assets/minicinema/main.png";
-import detail from "../../assets/minicinema/detail.png";
-import reserve from "../../assets/minicinema/reserve.png";
-import seat from "../../assets/minicinema/seat.png";
-import reservation from "../../assets/minicinema/reservation.png";
-import payment from "../../assets/minicinema/payment.png";
-import search from "../../assets/minicinema/search.png";
+import mini from "../../assets/minicinema/mini.gif";
 function MiniCinema() {
-  const imageSrcs = [main, detail, reserve, seat, payment, reservation, search];
   return (
     <div className="pt-[20px] px-[30px]">
       <h2 className="text-[30px] text-center font-semibold">Mini Cinema</h2>
       <p className="text-center">영화 좌석 예매 사이트</p>
       <div className="desktop:hidden w-[100%] mt-2 image">
-        <ImgSwiper imageSrcs={imageSrcs} />
+        <img src={mini}/>
       </div>
       <div className="flex gap-[50px] tablet:flex-col-reverse mobile:flex-col-reverse tablet:gap-[20px] mobile:gap-[10px] px-[40px] tablet:px-5 tablet:py-[20px] mobile:px-0 py-[50px]">
         <div className="w-[50%] image tablet:w-full mobile:w-full">
           <div className="mobile:hidden tablet:hidden">
-            <ImgSwiper imageSrcs={imageSrcs} />
+            <img src={mini}/>
           </div>
           <ul className="list-disc text-[18px] mobile:text-[14px] mt-[50px] tablet:mt-[10px] mobile:mt-[5px] mobile:text-nowrap flex flex-col gap-2 pl-5">
             <li>

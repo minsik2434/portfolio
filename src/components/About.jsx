@@ -58,28 +58,36 @@ const About = forwardRef((props, ref) => {
         <div className="w-[60%] tablet:w-full mobile:w-full">
           <div className="px-[100px] pt-[80px] tablet:pt-[50px] mobile:pt-[20px] tablet:px-5 mobile:px-0">
             <h2 className="px-10 text-[30px] tablet:text-[25px] mobile:text-[20px] font-NotoSansKR_Light text-[#4b89dc]">
-              업무에 대한 책임감과 팀과의 협력을 중심으로
+              코드 품질과 리팩터링
             </h2>
-            <div className="text-[20px] pt-[35px] tablet:pt-[20px] mobile:pt-[15px] tablet:text-[18px] mobile:text-[14px] px-10">
-              <p>
-                안녕하세요 책임감 있게 주어진 일을 완수하고 팀과의 협력으로
-                목표를 달성하는 개발자 최민식 입니다.
+            <div className="text-[20px] pt-[15px] tablet:pt-[20px] mobile:pt-[15px] tablet:text-[18px] mobile:text-[14px] px-10">
+              <p>단순히 기능이 동작하는 것에 만족하지 않고 유지보수성을 높이기 위해 <br/>
+                디자인 패턴을 고민하고, 지속적인 리팩터링을 통해 읽기 좋은 효율적인 코드를 작성하기 위해
+                끊임없이 노력합니다.
               </p>
-              <p>
-                저는 웹 백엔드에 관련된 다양한 기술들을 학습하고 응용하여 여러
-                프로젝트를 진행한 경험이 있습니다.
+            </div>
+            <h2 className="px-10 text-[30px] pt-[20px] tablet:text-[25px] mobile:text-[20px] font-NotoSansKR_Light text-[#4b89dc]">
+              확장성 있는 아키텍처
+            </h2>
+            <div className="text-[20px] pt-[15px] tablet:pt-[20px] mobile:pt-[15px] tablet:text-[18px] mobile:text-[14px] px-10">
+              <p>시스템 확장에 대비하여 유연하게 대처할 수 있는 시스템 구조를 설계하는데 관심을 가지고 있으며, <br/>
+                확장에 유연한 구조를 프로젝트에 적용하기 위해 고민합니다.
               </p>
-              <p>
-                문제 해결에 대해 적극적으로 나서는 자세를 가지고 있고 또한 팀의
-                일원으로 협력과 소통의 중요성을 깊이 이해하고 있습니다. 이를
-                통해 팀의 목표를 함께 달성하는것을 최우선으로 생각합니다. 팀
-                프로젝트를 진행할때는 부여된 과제에 대해 책임감있게 완료하는 데
-                집중하였고 이를 통해 팀과의 소통과 협력 능력을 키울 수
-                있었습니다
+            </div>
+            <h2 className="px-10 text-[30px] pt-[20px] tablet:text-[25px] mobile:text-[20px] font-NotoSansKR_Light text-[#4b89dc]">
+              인프라와 배포 자동화
+            </h2>
+            <div className="text-[20px] pt-[15px] tablet:pt-[20px] mobile:pt-[15px] tablet:text-[18px] mobile:text-[14px] px-10">
+              <p>애플리케이션 로직 개발 뿐만 아니라 Linux 환경에서의 서버 운영과 Jenkins 등을 활용한 배포 파이프라인(CI/CD)를 구축 등<br/>
+                서비스의 전체적인 흐름을 이해하고 주도적으로 다룰 수 있도록 노력합니다.
               </p>
-              <p>
-                이러한 경험을 바탕으로 목표에 대해 끊임없이 학습하고 노력하며
-                주어진 일을 책임감 있게 해결하는 개발자가 되겠습니다
+            </div>
+            <h2 className="px-10 text-[30px] pt-[20px] tablet:text-[25px] mobile:text-[20px] font-NotoSansKR_Light text-[#4b89dc]">
+              주도적인 문제 해결과 협업
+            </h2>
+            <div className="text-[20px] pt-[15px] tablet:pt-[20px] mobile:pt-[15px] tablet:text-[18px] mobile:text-[14px] px-10">
+              <p>주어진 과제에 대해 끝까지 책임지고 완수하는 끈기로 문제를 해결하고,<br/>
+                팀 프로젝트시 적극적인 기술적 소통을 통해 팀원들과 함께 더 나은 문제 해결 방법을 찾아가는 과정을 중요시 생각합니다.
               </p>
             </div>
           </div>

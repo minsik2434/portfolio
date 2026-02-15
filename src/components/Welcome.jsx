@@ -5,10 +5,10 @@ import useTypingAnnimation from "../hooks/useTypingAnnimation";
 import { forwardRef } from "react";
 const Welcome = forwardRef((props, ref) => {
   const { animeFinishFlag: firstFlag, TypingTextDiv: Greet } =
-    useTypingAnnimation("안녕하세요", 200);
+    useTypingAnnimation("안녕하세요.", 60);
   const { TypingTextDiv: Introduce } = useTypingAnnimation(
-    "개발자 최민식 포트폴리오 입니다",
-    100,
+    "지속적으로 개선하고, 확장가능한 구조를 고민하는 개발자 최민식 입니다.",
+    50,
     firstFlag
   );
 

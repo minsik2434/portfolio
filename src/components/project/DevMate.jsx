@@ -1,16 +1,6 @@
 import React from "react";
-import main from "../../assets/devmate/main.png";
-import login from "../../assets/devmate/login.png";
-import signup from "../../assets/devmate/signup.png";
-import board from "../../assets/devmate/board.png";
-import board2 from "../../assets/devmate/board2.png";
-import boardDetail from "../../assets/devmate/boardDetail.png";
-import profile from "../../assets/devmate/profile.png";
-import ImgSwiper from "../ImgSwiper";
+import devmate from "../../assets/devmate/devmate.gif";
 function DevMate() {
-  const siteLink = () => {
-    window.location.href = "https://devmate-fe.vercel.app";
-  };
 
   const frontEnd = () => {
     window.location.href = "https://github.com/minsik2434/DevMateFE";
@@ -25,18 +15,17 @@ function DevMate() {
       "https://www.notion.so/DevMate-cd8e323d3c744ad8a3659973e7e77274";
   };
 
-  const imageSrcs = [main, login, signup, board, board2, boardDetail, profile];
   return (
     <div className="pt-[20px] px-[30px]">
       <h2 className="text-[30px] text-center font-semibold">DevMate</h2>
       <p className="text-center">개발자 커뮤니티 사이트</p>
       <div className="desktop:hidden w-[100%] mt-2 image">
-        <ImgSwiper imageSrcs={imageSrcs} />
+        <img src={devmate}/>
       </div>
       <div className="flex gap-[50px] tablet:flex-col-reverse mobile:flex-col-reverse tablet:gap-[20px] mobile:gap-[10px] px-[40px] tablet:px-5 tablet:py-[20px] mobile:px-0 py-[50px]">
         <div className="w-[50%] image tablet:w-full mobile:w-full">
           <div className="mobile:hidden tablet:hidden">
-            <ImgSwiper imageSrcs={imageSrcs} />
+            <img src={devmate}/>
           </div>
           <ul className="list-disc text-[18px] mt-[50px] tablet:mt-[10px] mobile:mt-[5px] mobile:text-nowrap flex flex-col gap-2 pl-5">
             <li>
@@ -90,6 +79,14 @@ function DevMate() {
               </div>
             </div>
           </div>
+          <div className="mt-[20px] bg-gray-800 p-6 rounded-2xl border border-gray-700">
+            <h3 className="text-[22px] font-bold text-blue-400 mb-4 border-b border-gray-700 pb-2">Troubleshooting & Learnings</h3>
+            <ul className="list-disc ml-5 text-[15px] text-gray-300 space-y-3 leading-relaxed">
+              <li><strong className="text-white">JPA 연관 관계 최적화:</strong> 게시판 목록 조회 시 발생하는 N+1 문제를 Querydsl의 Fetch Join을 활용해 해결하여 쿼리 호출 횟수 감소.</li>
+              <li><strong className="text-white">보안 강화:</strong> Spring Security와 JWT를 활용해 안전한 로그인/회원가입 로직 및 인증/인가 아키텍처 구현.</li>
+              <li><strong className="text-white">CORS(교차 출처 리소스 공유) 에러 및 라우팅:</strong> Spring Security 및 WebMvcConfigurer를 통해 허용할 Origin과 HTTP 메서드를 세밀하게 제어하는 CORS 정책을 설정하여 프론트-백엔드 간의 안전한 통신을 확보.</li>
+            </ul>
+          </div>
         </div>
         <div className="flex flex-col w-[40%] tablet:w-full mobile:w-full">
           <h3 className="text-[20px] font-semibol py-[10px]">Description</h3>
@@ -99,9 +96,8 @@ function DevMate() {
             위한 사이트이므로 게시글을 마크다운으로 작성할 수 있도록 하였고
             접근성을 높이기 위해 반응형으로 제작해 모바일환경 UI 제공됩니다.
             <br />
-            MySql을 이용해 데이터베이스를 구성하였고 API 백엔드 서버는 Amazon
-            EC2를 이용해 배포하였고, 웹 사이트 FrontEnd 서버는 Vercel을 이용해
-            배포하였습니다. <br />
+            기획부터 화면 설계, 서버 구축 및 배포까지 전체 사이클을 직접 경험하며, 클라이언트와 서버 간의 데이터 흐름과 RESTful API 설계의 중요성을 깊이 이해할 수 있었던 프로젝트입니다. 
+            <br />
             백엔드 서버는 Spring 프레임워크를 이용해 구현하였으며 ORM은 JPA를
             사용해 핵심 로직을 구현하였습니다 <br />
             프론트엔드 서버는 리액트를 사용해 구현하였으며 Zustand를 사용해 전역
@@ -173,24 +169,6 @@ function DevMate() {
           </div>
           <div className="py-[10px]">
             <ul className="list-disc ml-5 flex flex-col gap-2">
-              <li>
-                <div>
-                  <span>사이트 URL : </span>
-                  <a
-                    className="underline text-blue-400 mobile:hidden"
-                    href="https://devmate-fe.vercel.app"
-                  >
-                    https://devmate-fe.vercel.app
-                  </a>
-                  <button
-                    type="button"
-                    className="px-2 bg-[#495057] text-white tablet:hidden desktop:hidden hover:bg-[#343a40] rounded-md"
-                    onClick={siteLink}
-                  >
-                    바로가기
-                  </button>
-                </div>
-              </li>
               <li>
                 <div>
                   <span>프론드엔드 깃허브 : </span>

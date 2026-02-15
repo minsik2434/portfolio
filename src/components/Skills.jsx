@@ -16,8 +16,13 @@ import Tailwind from "../assets/skills/tailwind.png";
 import react from "../assets/skills/react.png";
 import thymeleaf from "../assets/skills/thymeleaf.png";
 import SpringSecurity from "../assets/skills/springsecurity.png";
+import Redis from "../assets/skills/redis.png";
 import Git from "../assets/skills/git.png";
 import Github from "../assets/skills/github.png";
+import Kafka from "../assets/skills/kafka.png";
+import Docker from "../assets/skills/docker.png";
+import Ansible from "../assets/skills/ansible.png";
+
 const Skills = forwardRef((props, ref) => {
   return (
     <div className="bg-[#f6f6fe]">
@@ -32,34 +37,39 @@ const Skills = forwardRef((props, ref) => {
               <div className="flex mobile:flex-col mobile:items-start items-center gap-12 mobile:gap-4 mt-[30px] mobile:mt-[20px] flex-wrap">
                 <Icon img={Java} name="JAVA" />
                 <Icon img={Spring} name="Spring" />
+                <Icon img={Spring} name="Spring Cloud" />
                 <Icon img={SpringBoot} name="Spring Boot" />
                 <Icon img={SpringSecurity} name="Spring Security" />
                 <Icon img={SpringDataJpa} name="Spring Data JPA" />
                 <Icon img={Jpa} name="JPA" />
                 <Icon img={Querydsl} name="QueryDsl" />
-                <Icon img={MySql} name="MySql" />
               </div>
             </div>
             <div className="px-[50px] py-[20px] bg-white rounded-[70px]">
-              <h3 className="text-[25px] font-semibold">Cloud</h3>
+              <h3 className="text-[25px] font-semibold">Database</h3>
               <div className="flex mobile:flex-col mobile:items-start items-center gap-12 mobile:gap-4 mt-[30px] mobile:mt-[20px] flex-wrap">
+                <Icon img={MySql} name="MySql" />
+                <Icon img={Redis} name="Redis" />
+              </div>
+            </div>
+            <div className="px-[50px] py-[20px] bg-white rounded-[70px]">
+              <h3 className="text-[25px] font-semibold">Infra & Devops</h3>
+              <div className="flex mobile:flex-col mobile:items-start items-center gap-12 mobile:gap-4 mt-[30px] mobile:mt-[20px] flex-wrap">
+                <Icon img={Docker} name="Docker" />
+                <Icon img={Kafka} name="Kafka" />
+                <Icon img={Ansible} name="Ansible" />
                 <Icon img={Ec2} name="EC2" />
                 <Icon img={S3} name="S3" />
               </div>
             </div>
             <div className="px-[50px] py-[20px] bg-white rounded-[70px]">
-              <h3 className="text-[25px] font-semibold">Front-End</h3>
+              <h3 className="text-[25px] font-semibold">Front-End & Tool</h3>
               <div className="flex mobile:flex-col mobile:items-start items-center gap-12 mobile:gap-4 mt-[30px] mobile:mt-[20px] flex-wrap">
                 <Icon img={Html} name="HTML" />
                 <Icon img={Css} name="CSS" />
                 <Icon img={Tailwind} name="Tailwind" />
                 <Icon img={react} name="React" />
                 <Icon img={thymeleaf} name="thymeleaf" />
-              </div>
-            </div>
-            <div className="px-[50px] py-[20px] bg-white rounded-[70px]">
-              <h3 className="text-[25px] font-semibold">ETC</h3>
-              <div className="flex mobile:flex-col mobile:items-start items-center gap-12 mobile:gap-4 mt-[30px] mobile:mt-[20px] flex-wrap">
                 <Icon img={Git} name="Git" />
                 <Icon img={Github} name="Github" />
               </div>
