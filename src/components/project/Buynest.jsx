@@ -1,5 +1,12 @@
 import buynest from "../../assets/buynest/buynest.gif";
 function Buynest() {
+    const github = () => {
+        window.location.href = "https://github.com/ecommerce-kubernetes/ecommerce";
+    };
+
+    const site = () => {
+        window.location.href = "https://api.buynest.cloud";
+    };
 
     return (
         <div className="pt-[20px] px-[30px]">
@@ -151,16 +158,30 @@ function Buynest() {
                         >
                           https://github.com/ecommerce-kubernetes/ecommerce
                         </a>
+                        <button
+                            type="button"
+                            className="px-2 bg-[#495057] text-white hover:bg-[#343a40] tablet:hidden desktop:hidden rounded-md"
+                            onClick={github}
+                        >
+                            바로가기
+                        </button>
                     </div>
                   </li>
                   <li>
                     <div>
-                      <span>바로가기 :</span>
+                      <span>사이트 :</span>
                       <a className="underline text-blue-400 mobile:hidden"
                          href="https://api.buynest.cloud"
                       >
                         https://api.buynest.cloud
                       </a>
+                        <button
+                            type="button"
+                            className="px-2 bg-[#495057] text-white hover:bg-[#343a40] tablet:hidden desktop:hidden rounded-md"
+                            onClick={site}
+                        >
+                            바로가기
+                        </button>
                     </div>
                   </li>
                 </ul>
